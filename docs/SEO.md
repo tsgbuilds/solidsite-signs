@@ -30,7 +30,7 @@ These are six distinct marketing pages, not city-name duplicates. Page intent is
 
 Fourteen tests passed: all existing intake/privacy checks plus metadata, schema relationships/CSP, sitemap/robots, canonical aliases, HEAD responses and real error/private boundaries. All six marketing pages render without horizontal overflow at 320 and 768 pixels; desktop and 390-pixel service/guide layouts inspected. One H1 on each page. A window-graphics CTA correctly preselected Graphics and submitted a **local-only** test receipt `SS-E8E5CBD4A9A8`. No browser errors or warnings observed. Local QA is not a customer lead.
 
-Publication evidence is recorded after deployment in the existing task and release record. The current approved origin is `https://solidsite-signs-production.up.railway.app`; no owned custom domain was supplied at the time of implementation. Metadata follows `SITE_URL`, making the later host change centralized rather than requiring each page to be edited.
+Publication evidence is recorded after deployment in the existing task and release record. At the initial implementation, the approved origin was `https://solidsite-signs-production.up.railway.app`. On November 3, Erik corrected his earlier answer and confirmed ownership of `SolidSiteSigns.com`; the verified canonical origin is now `https://solidsitesigns.com`. Metadata follows `SITE_URL`, making the later host change centralized rather than requiring each page to be edited.
 
 ## Research and rationale
 
@@ -45,7 +45,7 @@ Primary sources reviewed November 2, 2026:
 
 ## Next evidence that will strengthen the site
 
-1. Confirm the owned public domain. Configure DNS/TLS and then update `SITE_URL`; retain redirects when moving from the Railway address. No domain purchase or DNS action is included without a supplied domain and access.
+1. **Completed November 3:** connect the owned `solidsitesigns.com` domain and `www` alias, verify HTTPS, update `SITE_URL`, and permanently redirect the Railway/`www` hosts to the apex while preserving paths and queries. See [release evidence](RELEASE.md#owned-domain-connection--november-3-2026).
 2. Verify the final domain in Google Search Console, submit `/sitemap.xml` and review actual queries, impressions, clicks and indexed pages. No Search Console ownership or submission is claimed in this release.
 3. Add authorized photos and a factual project write-up from Erik's actual work. Record scope, materials, process and customer permission before replacing the concept artwork or naming a dealer.
 4. Reconcile signage with the actual SolidSite business identity/listing before any Google Business Profile changes. Do not invent a storefront or create duplicate listings to pursue map visibility.

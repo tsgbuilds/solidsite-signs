@@ -47,3 +47,24 @@ Four substantive service pages and a project checklist now support the homepage.
 Fourteen automated checks passed, including the existing quote-storage/security checks. All six marketing pages were inspected at 320- and 768-pixel widths without horizontal overflow, with desktop and 390-pixel visual checks and successful local service-prefilled form submission. Google’s [live Rich Results Test](https://search.google.com/test/rich-results/result?id=VW3KV76oVZb1mAWSEMypfg) crawled the dealership page on November 2 at 10:43:58 PM Chicago and reported three valid items: breadcrumbs, organization and the organization entity also classified under local businesses. No critical errors. Optional address/image notes remain; a storefront address or real-project image was not invented to remove them. This validates the test fetch and markup, not indexing or rankings.
 
 No new production inquiry test, tracking script, paid campaign or scheduler was introduced. Existing persistent quote storage, approved contacts and intake ownership remain in use.
+
+
+## Owned-domain connection — November 3, 2026
+
+Erik corrected his initial “no domain” answer and confirmed he owns **SolidSiteSigns.com**, then reported completing the apex connection. The live canonical site is now **https://solidsitesigns.com**. This supersedes the Railway-origin configuration above and the earlier proposed domain alternatives; no domain purchase was needed.
+
+The Cloudflare account showed the apex CNAME already pointing to `lz2przmq.up.railway.app` with the matching Railway ownership TXT. Apex proxying remains enabled. Atlas added `www.solidsitesigns.com` to the same Railway service, target port 3000, changed the existing www CNAME from `cdn.webflow.com` to `69j6uv3f.up.railway.app`, and added the required `_railway-verify.www` TXT. The existing www DNS-only mode and unrelated TXT records were preserved; no mail, account-access or plan changes were made.
+
+Implementation `6ff9940` adds opt-in canonical-host redirects. Production now uses `SITE_URL=https://solidsitesigns.com` and `REDIRECT_HOSTS=solidsite-signs-production.up.railway.app,www.solidsitesigns.com`. Only GET/HEAD requests on those known aliases redirect; path/query are retained, destination comes solely from configured `SITE_URL`, and health/API routes retain their behavior. The primary configuration deployment `799f3b50-636e-454c-a8cd-5c5e85bb8b9a` was verified ACTIVE/successful.
+
+All 20 automated tests passed, including six migration checks and existing intake/SEO regressions; syntax and whitespace checks passed. Live checks verified HTTPS, seven pages with final-domain canonicals and no old-host metadata, six sitemap URLs, robots pointing to the new sitemap, and 308 redirects from both aliases with path/query preserved. `/healthz` returns 200/noindex. Early recursive DNS answers retained the old Webflow address while authoritative DNS had changed; browser and curl checks subsequently reached the new site normally. No indexing or ranking claim is implied.
+
+A live browser form submission on the final domain returned **SS-37454D8D1C70**. It is clearly marked **TEST ONLY — domain verification; do not contact, quote or count as a customer**. Add it alongside the prior QA reference in the existing lead-monitor exclusion. Email alerts and public admin access remain disabled. Screenshots are retained locally in ignored `artifacts/domain-live-home.jpg`, `artifacts/domain-quote-receipt.jpg` and `artifacts/domain-cloudflare-dns.jpg`.
+
+### Outcome report
+
+1. Company/task: SolidSite / SS-SIGNS-WEB-20261102; Atlas owns website delivery.
+2. Status: owned apex domain connected, www repaired, canonical metadata/sitemap and alias redirects live.
+3. Evidence: 20 passing tests, successful Railway deployment, live HTTPS/redirect crawl and final-domain form receipt.
+4. Next: existing WEB-LEADS-20261102 intake review; Google Search Console verification/submission and authorized real-project photos remain outstanding. No new deadline or schedule.
+5. Authority: existing build/main-push/SEO authorization plus Erik's domain ownership confirmation and apex setup; no purchase, plan upgrade, outreach or customer commitment.
