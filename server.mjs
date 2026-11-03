@@ -12,6 +12,13 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const contentSecurityPolicy = scriptHash => `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
 
+function hostnameFromHost(value) {
+  // Only a hostname and optional port are accepted, never a URL or forwarded host.
+  if (typeof value !== 'string' || !/^[a-z0-9.-]+(?::\d+)?$/i.test(value)) return '';
+  try { return new URL(`http://${value}`).hostname.toLowerCase().replace(/\.$/, ''); }
+  catch { return ''; }
+}
+
 function equalSecret(value, expected) {
   if (!value || !expected || expected.length < 32) return false;
   const a = Buffer.from(value), b = Buffer.from(expected);
@@ -44,8 +51,11 @@ async function parseBody(req) {
   throw Object.assign(new Error('Please use the project request form.'), { status: 415 });
 }
 
-export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'data'), siteUrl = process.env.SITE_URL || '', adminToken = process.env.ADMIN_TOKEN || '', trustProxy = process.env.TRUST_PROXY === '1', rateLimit = 10, rateWindow = 15 * 60 * 1000 } = {}) {
+export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'data'), siteUrl = process.env.SITE_URL || '', redirectHosts = process.env.REDIRECT_HOSTS || '', adminToken = process.env.ADMIN_TOKEN || '', trustProxy = process.env.TRUST_PROXY === '1', rateLimit = 10, rateWindow = 15 * 60 * 1000 } = {}) {
   const siteOrigin = siteUrl ? new URL(siteUrl).origin : '';
+  const siteHostname = siteUrl ? new URL(siteUrl).hostname.toLowerCase().replace(/\.$/, '') : '';
+  const redirectHostnames = new Set(redirectHosts.split(',').map(value => hostnameFromHost(value.trim())).filter(Boolean));
+  redirectHostnames.delete(siteHostname);
   const store = openQuoteStore(dataDir);
   const buckets = new Map();
   const server = createServer(async (req, res) => {
@@ -69,6 +79,15 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
     const fail = (status, message) => wantsJson ? json(status, { error: message }) : html(status, errorPage(message));
     try {
       const url = new URL(req.url, 'http://localhost');
+      const operationalPath = url.pathname === '/healthz' || url.pathname === '/api' || url.pathname.startsWith('/api/');
+      if (siteOrigin && !operationalPath && ['GET', 'HEAD'].includes(req.method) && redirectHostnames.has(hostnameFromHost(req.headers.host))) {
+        // The configured SITE_URL always owns the destination. Preserve the raw
+        // origin-form path/query, including encoded characters, without treating
+        // a leading // as a different redirect host.
+        const target = req.url.startsWith('/') ? req.url : `${url.pathname}${url.search}`;
+        res.writeHead(308, { Location: `${siteOrigin}${target}` });
+        return res.end();
+      }
       if (url.pathname.startsWith('/api/') || url.pathname === '/healthz') res.setHeader('X-Robots-Tag', 'noindex');
       if (url.pathname === '/healthz' && ['GET', 'HEAD'].includes(req.method)) return json(200, { ok: true });
       if (url.pathname === '/api/admin/leads') {

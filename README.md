@@ -30,6 +30,7 @@ Set these service variables:
 - `NODE_ENV=production`
 - `DATA_DIR=/data`
 - `SITE_URL=https://your-confirmed-domain.example` (actual deployed HTTPS origin; no path)
+- `REDIRECT_HOSTS=old-host.example,www.your-confirmed-domain.example` optionally enables permanent canonical-host redirects. Use a comma-separated list of known alias hostnames, without schemes or paths, only after the `SITE_URL` domain and HTTPS work. Leave unset to retain current behavior. Matching is case-insensitive and ignores the request port; the canonical hostname is excluded to prevent loops. Only GET/HEAD requests redirect, with their path and query preserved. `/healthz` and `/api` routes never redirect, and quote-origin validation remains unchanged. Unlisted hosts and forwarded-host headers cannot choose a redirect destination.
 - `PORT=3000` with the public domain's target port also set to `3000`; `HOST=0.0.0.0`
 - `ADMIN_TOKEN` to a random secret at least 32 characters long if the private intake API is needed.
 - `TRUST_PROXY=1` only if the hosting proxy replaces `X-Forwarded-For` with trusted client information. Default is off.
