@@ -17,3 +17,9 @@ Final generation prompt:
 The outlined SolidSite wordmark and symbol are from Erik's approved SolidSite brand kit dated October 15, 2026. The Signs descriptor is separate from the original wordmark. Barlow and Barlow Condensed are self-hosted with SIL Open Font License copies under `public/assets/fonts/`.
 
 November 2 SEO update: the three original TTF fonts were losslessly repackaged as WOFF2 using fontTools 4.60.2 in a temporary authoring environment. No font dependency is needed at runtime. Original fonts and license files are retained; CSS and preload links request WOFF2. Combined font transfer falls from 323,244 to 117,164 bytes (63.8% smaller), preserving the full glyph set.
+
+## Catalog — November 3, 2026
+
+The 12 SVGs under `public/assets/catalog/` are original vector illustrations created for SolidSite Signs: one overview and 11 category drawings. They show product formats, not completed client projects or exact supplier configurations. No supplier photographs, logos or catalog copy were reused. B2Sign's site terms do not grant a general redistribution license; its white-label navigation alone was not treated as permission.
+
+`public/downloads/solidsite-signs-catalog.pdf` uses original ReportLab vector drawings, the existing licensed Barlow fonts, and the existing generated storefront concept above, labeled as illustrative. The source generator is `scripts/build-catalog-pdf.py`. Product facts are paraphrased from the internal source notes and shared catalog data; private source URLs and supplier identities are excluded from the public PDF and website.

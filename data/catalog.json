@@ -1,0 +1,1152 @@
+{
+  "updated": "2026-11-03",
+  "categories": [
+    {
+      "id": "banners",
+      "title": "Banners",
+      "intro": "Promotions, openings, events and repeat campaigns. Choose the material and finishing around where your message will go.",
+      "items": [
+        {
+          "id": "vinyl-banners",
+          "name": "Vinyl banners",
+          "description": "Big, full-color messages for promotions, openings and events.",
+          "options": "13, 15 and 18 oz material options; finishing by project.",
+          "service": "Banners",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2",
+            "https://www.b2sign.com/13oz-vinyl-banner"
+          ]
+        },
+        {
+          "id": "blockout-banners",
+          "name": "Heavyweight blockout banners",
+          "description": "A heavier banner with a core that limits show-through.",
+          "options": "18 oz; one- or two-sided print options.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/vinyl-banner-18oz-blockout"
+          ]
+        },
+        {
+          "id": "mesh-banners",
+          "name": "Mesh banners",
+          "description": "Perforated banner material for locations where airflow matters.",
+          "options": "Printed polyester mesh; mounting reviewed for the site.",
+          "service": "Banners",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2",
+            "https://www.b2sign.com/mesh-banners"
+          ]
+        },
+        {
+          "id": "smooth-banners",
+          "name": "Smooth indoor banners",
+          "description": "A smooth graphic surface for close-view indoor displays.",
+          "options": "Lay-flat display material and finishing options.",
+          "service": "Banners",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2",
+            "https://www.b2sign.com/super-smooth-indoor-banner"
+          ]
+        },
+        {
+          "id": "fabric-banners",
+          "name": "Fabric banners",
+          "description": "Printed fabric for event graphics and indoor branding.",
+          "options": "9 oz fabric option; size and finishing by quote.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/fabric-banner-9oz-wrinkle-free"
+          ]
+        },
+        {
+          "id": "blockout-fabric",
+          "name": "Blockout fabric banners",
+          "description": "Fabric graphics that reduce light showing through from behind.",
+          "options": "Light-blocking fabric; custom printed artwork.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/fabric-block-out"
+          ]
+        },
+        {
+          "id": "tension-fabric-graphics",
+          "name": "Tension fabric graphics",
+          "description": "Fitted fabric prints made for compatible display hardware.",
+          "options": "Two-way stretch; template and frame match required.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/tension-fabric"
+          ]
+        },
+        {
+          "id": "backlit-banners",
+          "name": "Backlit banners",
+          "description": "Translucent printed graphics for compatible illuminated displays.",
+          "options": "Backlit vinyl; lightbox specifications reviewed.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/vinyl-banner-backlit"
+          ]
+        },
+        {
+          "id": "pole-banners",
+          "name": "Pole banners",
+          "description": "Double-sided messages for approved pole locations.",
+          "options": "Pole pockets; matching bracket options.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/pole-banner-set"
+          ]
+        },
+        {
+          "id": "hand-banners",
+          "name": "Hand banners",
+          "description": "Portable banners supporters can hold at games and events.",
+          "options": "Printed vinyl with handles.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/hand-banner"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rigid-signs",
+      "title": "Rigid signs & magnets",
+      "intro": "From temporary yard signs to mounted panels. Match the substrate, size and support to the placement.",
+      "items": [
+        {
+          "id": "yard-signs",
+          "name": "Yard signs",
+          "description": "Lightweight rigid signs for promotions, directions and job sites.",
+          "options": "4 or 10 mm corrugated plastic; stake options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/coroplast"
+          ]
+        },
+        {
+          "id": "acrylic-signs",
+          "name": "Acrylic signs & photo panels",
+          "description": "Printed clear panels for interior branding and image displays.",
+          "options": "White-ink and mounting options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/rigid-signs-and-magnets"
+          ]
+        },
+        {
+          "id": "foam-board",
+          "name": "Foam-board signs",
+          "description": "Lightweight boards for indoor events, presentations and displays.",
+          "options": "3/16-inch foam board; indoor use.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/foamcore"
+          ]
+        },
+        {
+          "id": "gatorfoam",
+          "name": "Gatorfoam signs",
+          "description": "Rigid display boards for indoor presentations and exhibits.",
+          "options": "3/16- and 1/2-inch options; white or black.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/rigid-signs-and-magnets"
+          ]
+        },
+        {
+          "id": "pvc-signs",
+          "name": "PVC signs",
+          "description": "Smooth plastic panels for printed business and event messages.",
+          "options": "3 and 6 mm options; application reviewed.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/rigid-signs-and-magnets"
+          ]
+        },
+        {
+          "id": "styrene-signs",
+          "name": "Styrene signs & inserts",
+          "description": "Flexible plastic graphics for holders, inserts and displays.",
+          "options": "Thin, smooth plastic sheet.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/styrene"
+          ]
+        },
+        {
+          "id": "aluminum-signs",
+          "name": "Aluminum signs",
+          "description": "Printed metal panels for business identification and information.",
+          "options": ".040- and .080-inch options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/rigid-signs-and-magnets"
+          ]
+        },
+        {
+          "id": "composite-signs",
+          "name": "Aluminum composite signs",
+          "description": "Rigid panels with metal faces and a lightweight core.",
+          "options": "3 and 6 mm options; mounting by scope.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/rigid-signs-and-magnets"
+          ]
+        },
+        {
+          "id": "bubble-core-signs",
+          "name": "Bubble-core plastic signs",
+          "description": "Lightweight plastic panels with a rigid internal bubble structure.",
+          "options": "4 mm polyethylene; satin finish.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1"
+          ]
+        },
+        {
+          "id": "magnetic-signs",
+          "name": "Vehicle & custom magnets",
+          "description": "Removable printed messages for suitable magnetic surfaces.",
+          "options": "Standard sizes, custom sizes and contour-cut options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/4",
+            "https://www.b2sign.com/magnets"
+          ]
+        },
+        {
+          "id": "property-posts",
+          "name": "Hanging post signs",
+          "description": "A hanging sign panel paired with a matching post system.",
+          "options": "PVC post and composite-panel options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/real-estate"
+          ]
+        },
+        {
+          "id": "property-frames",
+          "name": "Steel-frame sign sets",
+          "description": "Reusable frames holding changeable property or directional signs.",
+          "options": "Drop-in panels; one- or two-sided graphics.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/real-estate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adhesive-graphics",
+      "title": "Adhesive & window graphics",
+      "intro": "Graphics for glass, walls, floors and suitable vehicle surfaces. Material and installation are matched to the surface.",
+      "items": [
+        {
+          "id": "adhesive-vinyl",
+          "name": "Printed adhesive vinyl",
+          "description": "Custom printed graphics for suitable smooth, flat surfaces.",
+          "options": "Permanent adhesive and air-release options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/adhesive-vinyl"
+          ]
+        },
+        {
+          "id": "performance-vinyl",
+          "name": "High-performance vinyl",
+          "description": "Conformable printed graphics for flat surfaces and simple curves.",
+          "options": "Repositionable application options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "wrap-graphics",
+          "name": "Vehicle wrap graphics",
+          "description": "Printed wrap media for vehicle branding and shaped surfaces.",
+          "options": "Cast vinyl options; installation reviewed separately.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "window-perf",
+          "name": "Perforated window graphics",
+          "description": "Window promotions printed on perforated adhesive film.",
+          "options": "50/50 and 70/30 options; visibility depends on lighting.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "window-cling",
+          "name": "Window clings",
+          "description": "Changeable window messages using removable cling material.",
+          "options": "Inside- or outside-facing options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/premium-window-cling"
+          ]
+        },
+        {
+          "id": "clear-vinyl",
+          "name": "Clear window graphics",
+          "description": "Printed graphics with a transparent background on suitable glass.",
+          "options": "Clear adhesive film; artwork coverage reviewed.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "frosted-vinyl",
+          "name": "Frosted glass graphics",
+          "description": "A frosted graphic treatment for interior glass and partitions.",
+          "options": "Printable frosted vinyl.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "double-window",
+          "name": "Double-sided window graphics",
+          "description": "Different messages visible from each side of a window.",
+          "options": "Double-sided printed adhesive construction.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3"
+          ]
+        },
+        {
+          "id": "translucent-vinyl",
+          "name": "Translucent sign-face graphics",
+          "description": "Printed adhesive faces for compatible illuminated signs.",
+          "options": "Translucent vinyl; existing sign details required.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/adhesive-products"
+          ]
+        },
+        {
+          "id": "indoor-floor",
+          "name": "Indoor floor graphics",
+          "description": "Wayfinding and promotional graphics for suitable indoor floors.",
+          "options": "Floor-film and laminate options; surface review required.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/floor-graphics"
+          ]
+        },
+        {
+          "id": "outdoor-floor",
+          "name": "Outdoor floor graphics",
+          "description": "Printed pavement graphics for selected outdoor surfaces.",
+          "options": "Outdoor adhesive material; location and surface review.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "displays",
+      "title": "Displays & sign holders",
+      "intro": "Portable formats for sales floors, reception areas, photo opportunities and trade-show booths.",
+      "items": [
+        {
+          "id": "retractable-stands",
+          "name": "Retractable banner stands",
+          "description": "Pull-up graphics that pack into their own base.",
+          "options": "Economy, standard, deluxe and wider formats.",
+          "service": "Banners",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2",
+            "https://www.b2sign.com/banner-stands"
+          ]
+        },
+        {
+          "id": "tabletop-retractable",
+          "name": "Tabletop retractable banners",
+          "description": "Compact pull-up displays for counters and event tables.",
+          "options": "Small-format retractable hardware and printed insert.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/banner-stands"
+          ]
+        },
+        {
+          "id": "x-banner",
+          "name": "X-banner stands",
+          "description": "Lightweight frames supporting replaceable banner graphics.",
+          "options": "Multiple sizes; grommeted print.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/banner-stands"
+          ]
+        },
+        {
+          "id": "tension-stands",
+          "name": "Tension fabric stands",
+          "description": "Tall displays with fitted fabric graphics over a frame.",
+          "options": "Single- and double-sided options.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/banner-stands"
+          ]
+        },
+        {
+          "id": "step-repeat",
+          "name": "Step-and-repeat backdrops",
+          "description": "Branded photo backgrounds for events and announcements.",
+          "options": "Fabric graphic and compatible tube frame.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/step-repeat-backdrop"
+          ]
+        },
+        {
+          "id": "fabric-backwalls",
+          "name": "Tension fabric backwalls",
+          "description": "Wide exhibit graphics in straight or curved formats.",
+          "options": "Multiple booth widths; fitted fabric and frame.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/trade-show-products"
+          ]
+        },
+        {
+          "id": "popup-displays",
+          "name": "Popup fabric displays",
+          "description": "Fabric backwalls supported by folding accordion hardware.",
+          "options": "Straight and curved hook-and-loop options.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/trade-show-products"
+          ]
+        },
+        {
+          "id": "booth-kits",
+          "name": "Modular trade-show kits",
+          "description": "Coordinated display components for your booth footprint.",
+          "options": "10 x 10, 10 x 20 and 20 x 20 ft families.",
+          "service": "Multiple services",
+          "sources": [
+            "https://www.b2sign.com/trade-show-products"
+          ]
+        },
+        {
+          "id": "podiums",
+          "name": "Branded podiums",
+          "description": "A compact greeting and presentation point for your exhibit.",
+          "options": "Printed graphic and compatible podium options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/trade-show-products"
+          ]
+        },
+        {
+          "id": "seg-displays",
+          "name": "SEG fabric displays",
+          "description": "Fabric graphics with edges that fit a slim display frame.",
+          "options": "Non-lit frames and replacement graphics.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/seg-products"
+          ]
+        },
+        {
+          "id": "backlit-seg",
+          "name": "Backlit SEG displays",
+          "description": "Illuminated fabric graphics in a freestanding frame.",
+          "options": "LED frame options; one- or two-sided formats.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/10ft-seg-backlit-fabric-display"
+          ]
+        },
+        {
+          "id": "popup-seg",
+          "name": "Backlit SEG popup displays",
+          "description": "Illuminated exhibit graphics with a folding display frame.",
+          "options": "8 and 10 ft product families.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/seg-products"
+          ]
+        },
+        {
+          "id": "sidewalk-boards",
+          "name": "Plastic sidewalk signs",
+          "description": "Portable sandwich-board displays for entrance promotions.",
+          "options": "Standard, removable-panel and compact formats.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/signicade-a-frame"
+          ]
+        },
+        {
+          "id": "metal-aframes",
+          "name": "Metal sidewalk A-frames",
+          "description": "Metal frames with replaceable printed sign panels.",
+          "options": "Drop-in corrugated-plastic graphics.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/a-frame-and-sign-holders"
+          ]
+        },
+        {
+          "id": "banner-aframes",
+          "name": "Banner A-frames",
+          "description": "Freestanding frames carrying large promotional banners.",
+          "options": "Aluminum frame; 4 and 8 ft formats.",
+          "service": "Banners",
+          "sources": [
+            "https://www.b2sign.com/banner-a-frame"
+          ]
+        },
+        {
+          "id": "poster-stands",
+          "name": "Indoor poster stands",
+          "description": "Freestanding holders for changeable indoor messages.",
+          "options": "Steel stand and matching printed insert.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/poster-stand"
+          ]
+        },
+        {
+          "id": "small-aframes",
+          "name": "Small directional A-frames",
+          "description": "Compact portable signs for properties and event directions.",
+          "options": "24 x 18-inch panel format.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/real-estate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Flags, tents & table covers",
+      "intro": "Build a coordinated event presence with matching graphics, compatible hardware and a clear setup plan.",
+      "items": [
+        {
+          "id": "feather-flags",
+          "name": "Feather flags",
+          "description": "Tall promotional flags for entrances and event spaces.",
+          "options": "Angled and convex shapes; base and print-side options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/advertising-flags"
+          ]
+        },
+        {
+          "id": "teardrop-flags",
+          "name": "Teardrop flags",
+          "description": "Curved flag displays for business and event branding.",
+          "options": "Multiple heights; one- or two-sided graphics.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/teardrop-flag"
+          ]
+        },
+        {
+          "id": "rectangle-flags",
+          "name": "Rectangle flags",
+          "description": "Rectangular flag displays for logos and promotional messages.",
+          "options": "Multiple heights and base options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/advertising-flags"
+          ]
+        },
+        {
+          "id": "pole-flags",
+          "name": "Custom pole flags",
+          "description": "Your artwork printed for use on compatible flag hardware.",
+          "options": "Standard or custom sizes; grommet finishing.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/advertising-flags"
+          ]
+        },
+        {
+          "id": "desktop-flags",
+          "name": "Desktop flags",
+          "description": "Small flag displays for counters, desks and reception areas.",
+          "options": "Desktop teardrop format.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/advertising-flags"
+          ]
+        },
+        {
+          "id": "stock-flags",
+          "name": "Stock-message promotional flags",
+          "description": "Ready-designed flag messages for common business promotions.",
+          "options": "Selected designs with compatible pole and base.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/advertising-flags"
+          ]
+        },
+        {
+          "id": "event-tents",
+          "name": "Printed event tents",
+          "description": "Branded canopies that make your event space recognizable.",
+          "options": "10 x 10, 10 x 15 and 10 x 20 ft families.",
+          "service": "Multiple services",
+          "sources": [
+            "https://www.b2sign.com/custom-event-tents"
+          ]
+        },
+        {
+          "id": "tent-walls",
+          "name": "Tent walls & half walls",
+          "description": "Printed panels to coordinate with your branded canopy.",
+          "options": "Full or half walls; model-specific fit and supports.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/custom-event-tents"
+          ]
+        },
+        {
+          "id": "tent-flags",
+          "name": "Tent flag kits",
+          "description": "Flag accessories matched to compatible event tents.",
+          "options": "Hardware and graphics depend on the tent model.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/custom-event-tents"
+          ]
+        },
+        {
+          "id": "table-throws",
+          "name": "Printed table throws",
+          "description": "Loose-fitting branded covers for event and display tables.",
+          "options": "4, 6 and 8 ft options; open or closed back.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/table-throw"
+          ]
+        },
+        {
+          "id": "fitted-tables",
+          "name": "Fitted table covers",
+          "description": "Tailored rectangular covers for a clean event-table finish.",
+          "options": "6 and 8 ft options; back styles available.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/table-throw"
+          ]
+        },
+        {
+          "id": "stretch-tables",
+          "name": "Stretch table covers",
+          "description": "Close-fitting printed fabric wraps for event tables.",
+          "options": "6 and 8 ft options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/table-throw"
+          ]
+        },
+        {
+          "id": "round-tables",
+          "name": "Round table covers",
+          "description": "Branded covers for round meeting and cocktail tables.",
+          "options": "Standard and bar-height formats.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/table-throw"
+          ]
+        },
+        {
+          "id": "table-runners",
+          "name": "Table runners",
+          "description": "A strip of full-color branding across your table.",
+          "options": "Printed runner; coordinating throw options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/table-throw"
+          ]
+        },
+        {
+          "id": "solid-tables",
+          "name": "Solid-color table throws",
+          "description": "Simple unprinted covers to complete your event setup.",
+          "options": "6 and 8 ft options; selected colors.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/solid-color-table-throws-assorted-colors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wall-art",
+      "title": "Posters, wall art & murals",
+      "intro": "Artwork, messages and full-wall graphics for interiors. Choose a ready-to-display piece or a print for your own finishing.",
+      "items": [
+        {
+          "id": "paper-posters",
+          "name": "Paper posters",
+          "description": "Printed paper graphics for short-term indoor promotions.",
+          "options": "Bright-white satin paper.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2"
+          ]
+        },
+        {
+          "id": "durable-posters",
+          "name": "Tear-resistant posters",
+          "description": "Durable paper-style prints for repeated handling.",
+          "options": "Water- and tear-resistant polyethylene material.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2"
+          ]
+        },
+        {
+          "id": "display-inserts",
+          "name": "Poster & popup inserts",
+          "description": "Smooth non-adhesive graphics for compatible display systems.",
+          "options": "Blockout PVC display material.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/posters",
+            "https://www.b2sign.com/popup"
+          ]
+        },
+        {
+          "id": "canvas-roll",
+          "name": "Canvas roll prints",
+          "description": "Printed canvas supplied for custom stretching or framing.",
+          "options": "Canvas material and finish options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/2",
+            "https://www.b2sign.com/canvas-roll"
+          ]
+        },
+        {
+          "id": "canvas-wraps",
+          "name": "Canvas wraps",
+          "description": "Artwork stretched into a gallery-style canvas display.",
+          "options": "1.5-inch wrap format.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/wall-art"
+          ]
+        },
+        {
+          "id": "framed-canvas",
+          "name": "Framed canvas",
+          "description": "Canvas artwork finished with a surrounding frame.",
+          "options": "Selected frame colors.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/wall-art"
+          ]
+        },
+        {
+          "id": "framed-prints",
+          "name": "Framed prints",
+          "description": "Custom printed artwork presented in a display frame.",
+          "options": "Wood-style framing options.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/wall-art"
+          ]
+        },
+        {
+          "id": "wall-fabric",
+          "name": "Adhesive wall murals",
+          "description": "Custom printed fabric graphics for suitable interior walls.",
+          "options": "Removable, repositionable wall-fabric options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/wall-graphics"
+          ]
+        },
+        {
+          "id": "wallpaper",
+          "name": "Non-woven wallpaper",
+          "description": "Printed wallpaper for interior graphics and branded spaces.",
+          "options": "PVC-free, non-self-adhesive material.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/non_woven_wallpapper"
+          ]
+        },
+        {
+          "id": "wall-seg",
+          "name": "Wall-mounted fabric frames",
+          "description": "A slim frame with a replaceable silicone-edge fabric graphic.",
+          "options": "Black aluminum frame and matching printed fabric.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/wall_mount_seg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apparel-transfers",
+      "title": "Apparel & transfers",
+      "intro": "Branded shirts and transfer graphics for coordinated teams, events and promotional items.",
+      "items": [
+        {
+          "id": "printed-shirts",
+          "name": "Printed T-shirts",
+          "description": "Full-color printed shirts for your team, promotion or event.",
+          "options": "Direct-to-garment printing; garment and placement by quote.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/999"
+          ]
+        },
+        {
+          "id": "dtf-transfers",
+          "name": "DTF garment transfers",
+          "description": "Printed transfer films for application to compatible fabrics.",
+          "options": "Transfer supply; heat-press application reviewed separately.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/999",
+            "https://www.b2sign.com/direct-to-film"
+          ]
+        },
+        {
+          "id": "uv-dtf",
+          "name": "UV DTF transfers",
+          "description": "Adhesive printed graphics for compatible hard goods.",
+          "options": "Color, white and gloss; surface suitability reviewed.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/uv-dtf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "print",
+      "title": "Cards & handouts",
+      "intro": "Small-format printed pieces that keep your business in hand after the conversation ends.",
+      "items": [
+        {
+          "id": "business-cards",
+          "name": "Business cards",
+          "description": "A printed introduction with your business and contact details.",
+          "options": "Gloss or matte finish options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/11"
+          ]
+        },
+        {
+          "id": "postcards",
+          "name": "Postcards",
+          "description": "Compact printed pieces for announcements and promotions.",
+          "options": "Size and finish options by quote.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/11"
+          ]
+        },
+        {
+          "id": "mailers",
+          "name": "Printed mailers",
+          "description": "Printed promotional pieces prepared for your distribution plans.",
+          "options": "Printing only; mailing services are not included.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/11"
+          ]
+        },
+        {
+          "id": "metal-cards",
+          "name": "Aluminum business cards",
+          "description": "Rigid metal cards with a direct-printed full-color design.",
+          "options": "Gloss-finish aluminum.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specialty-signs",
+      "title": "Specialty & dimensional signs",
+      "intro": "Distinctive finishes, illuminated graphics and dimensional lettering. Each project starts with a product and site review.",
+      "items": [
+        {
+          "id": "front-lit-letters",
+          "name": "Front-lit channel letters",
+          "description": "Dimensional letters with illuminated acrylic faces.",
+          "options": "Front-lit and dual-light configurations.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/standard-channel-letter"
+          ]
+        },
+        {
+          "id": "halo-letters",
+          "name": "Halo-lit channel letters",
+          "description": "Dimensional letters with light directed behind the sign.",
+          "options": "Reverse-lit metal and acrylic configurations.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/reverse-lit",
+            "https://www.b2sign.com/channel-letter"
+          ]
+        },
+        {
+          "id": "premium-letters",
+          "name": "Premium acrylic-face letters",
+          "description": "Fabricated letters with full or inset acrylic face treatments.",
+          "options": "Configuration, mounting and lighting by project review.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/channel-letter"
+          ]
+        },
+        {
+          "id": "cut-metal",
+          "name": "Custom cut-metal signs",
+          "description": "Custom shapes cut from steel and finished in powder coat.",
+          "options": "16-gauge steel; selected colors and sizes.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/metal-sign"
+          ]
+        },
+        {
+          "id": "backlit-inserts",
+          "name": "Backlit film & polycarbonate",
+          "description": "Translucent non-adhesive inserts for compatible lightboxes.",
+          "options": "Film and flexible polycarbonate options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/1",
+            "https://www.b2sign.com/backlit-film"
+          ]
+        },
+        {
+          "id": "reflective-finishes",
+          "name": "Reflective sign finishes",
+          "description": "Reflective graphics for selected signs, panels and magnets.",
+          "options": "Reflective material selected for the intended application.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/reflective-products"
+          ]
+        },
+        {
+          "id": "dry-erase",
+          "name": "Dry-erase signs & graphics",
+          "description": "Custom printed artwork with a writable surface.",
+          "options": "Vinyl, magnet and selected rigid-board options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/3",
+            "https://www.b2sign.com/dry-erase-products"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hardware",
+      "title": "Hardware & replacements",
+      "intro": "Keep compatible displays in use with fresh graphics, matching supports and the right finishing components.",
+      "items": [
+        {
+          "id": "replacement-graphics",
+          "name": "Replacement display graphics",
+          "description": "New artwork fitted to your existing compatible display.",
+          "options": "Banner, fabric and SEG options; model details needed.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/custom-seg-fabric",
+            "https://www.b2sign.com/hardware-only"
+          ]
+        },
+        {
+          "id": "display-hardware",
+          "name": "Display frames & components",
+          "description": "Replacement hardware for compatible banners and exhibits.",
+          "options": "Retractable, X, tension, backdrop and booth components.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/hardware-only"
+          ]
+        },
+        {
+          "id": "flag-hardware",
+          "name": "Flag poles & bases",
+          "description": "Matched supports for your chosen flag and display surface.",
+          "options": "Model-specific poles, bases and accessories.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/hardware-only"
+          ]
+        },
+        {
+          "id": "tent-hardware",
+          "name": "Tent frames & supports",
+          "description": "Compatible frames and accessories for event canopies.",
+          "options": "Frames, half-wall supports and matching components.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/hardware-only"
+          ]
+        },
+        {
+          "id": "sign-stakes",
+          "name": "Yard-sign stakes & supports",
+          "description": "Support hardware for corrugated signs and panel displays.",
+          "options": "Standard or heavy-duty stakes; frame and post options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/6",
+            "https://www.b2sign.com/real-estate"
+          ]
+        },
+        {
+          "id": "standoffs",
+          "name": "Sign standoffs",
+          "description": "Mounting components that space a panel off its surface.",
+          "options": "Silver or black aluminum options.",
+          "service": "Graphics",
+          "sources": [
+            "https://signs365.com/portal/#catalog/6",
+            "https://www.b2sign.com/material"
+          ]
+        },
+        {
+          "id": "poster-hangers",
+          "name": "Poster rails & wood hangers",
+          "description": "Reusable top-and-bottom holders for compatible prints.",
+          "options": "Aluminum snap rails or magnetic wood hangers.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/snap-poster-hanger-hardware",
+            "https://www.b2sign.com/wall-art"
+          ]
+        },
+        {
+          "id": "display-lights",
+          "name": "Display lighting",
+          "description": "Compatible lighting accessories for exhibit hardware.",
+          "options": "LED accessory options; model match required.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/trade-show-products"
+          ]
+        },
+        {
+          "id": "blank-media",
+          "name": "Blank print media",
+          "description": "Unprinted material for your own production or finishing work.",
+          "options": "Selected vinyl, laminate and canvas.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/material"
+          ]
+        },
+        {
+          "id": "finishing-supplies",
+          "name": "Sign finishing supplies",
+          "description": "Selected components for assembling compatible sign materials.",
+          "options": "Banner tape, double-sided tape, masking tape and grommets.",
+          "service": "Graphics",
+          "sources": [
+            "https://www.b2sign.com/material"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Project services",
+      "intro": "Work directly with Erik to bring the product, artwork, production and site details together.",
+      "items": [
+        {
+          "id": "project-coordination",
+          "name": "Signage project coordination",
+          "description": "One contact to organize the brief, production and handoff.",
+          "options": "Scope, materials and schedule reviewed before approval.",
+          "service": "Multiple services",
+          "sources": [
+            "user:signage-sales-project-management"
+          ]
+        },
+        {
+          "id": "artwork-review",
+          "name": "Artwork & file coordination",
+          "description": "Review the required size, artwork format and placement.",
+          "options": "File preparation or design needs confirmed in the quote.",
+          "service": "Multiple services",
+          "sources": [
+            "user:signage-sales-project-management"
+          ]
+        },
+        {
+          "id": "installation-service",
+          "name": "Sign & graphic installation",
+          "description": "Installation for suitable signs, graphics and locations.",
+          "options": "Surface, access and mounting reviewed before scheduling.",
+          "service": "Installation",
+          "sources": [
+            "user:self-install-suitable-signage"
+          ]
+        },
+        {
+          "id": "local-delivery",
+          "name": "Local delivery & drop-off",
+          "description": "Bring completed signage to your agreed local destination.",
+          "options": "Greater Houston; delivery details confirmed by quote.",
+          "service": "Multiple services",
+          "sources": [
+            "user:self-deliver-signage"
+          ]
+        },
+        {
+          "id": "repeat-campaigns",
+          "name": "Dealership & repeat campaigns",
+          "description": "Coordinate recurring banners, graphics and promotional changes.",
+          "options": "Artwork, locations and dates kept together.",
+          "service": "Multiple services",
+          "sources": [
+            "user:local-dealership-signage-history"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 .git
 .env*
-data
+data/*
+!data/catalog.json
 artifacts
 node_modules
 tests
 docs
+tmp

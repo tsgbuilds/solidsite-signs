@@ -5,10 +5,11 @@ import { fileURLToPath } from 'node:url';
 import { timingSafeEqual } from 'node:crypto';
 import { openQuoteStore, validateQuote } from './lib/quotes.mjs';
 import { canonicalRedirect, findSeoPage, renderSeoHead, renderSitemap } from './lib/seo.mjs';
+import { getCatalog, renderCatalog } from './lib/catalog.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.pdf': 'application/pdf' };
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const contentSecurityPolicy = scriptHash => `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
 
@@ -146,10 +147,14 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
       let content;
       try { content = await readFile(path); } catch { return fail(404, 'This page could not be found.'); }
       if (page) {
-        const seo = renderSeoHead(page, siteOrigin);
-        content = Buffer.from(content.toString().replace('<!-- SEO_HEAD -->', seo.head));
+        const catalog = page.catalog ? getCatalog() : undefined;
+        const seo = renderSeoHead(page, siteOrigin, catalog);
+        let html = content.toString().replace('<!-- SEO_HEAD -->', seo.head);
+        if (catalog) html = html.replace('<!-- CATALOG_PRODUCTS -->', renderCatalog(catalog));
+        content = Buffer.from(html);
         res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
       }
+      if (extname(path) === '.pdf') res.setHeader('X-Robots-Tag', 'noindex');
       res.writeHead(200, { 'Content-Type': TYPES[extname(path)], 'Content-Length': content.length, 'Cache-Control': pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache' });
       res.end(req.method === 'HEAD' ? undefined : content);
     } catch (error) {

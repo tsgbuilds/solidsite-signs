@@ -1,7 +1,9 @@
 node_modules/
-data/
+data/*
+!data/catalog.json
 .env
 .env.*
 !.env.example
 .DS_Store
 artifacts/
+tmp/

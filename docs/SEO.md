@@ -14,13 +14,14 @@ The supported distinction is direct work with Erik on signage sales/project mana
 | `/sign-installation-houston/` | Sign/graphic installation and local delivery | Surface, sign specifications, mounting access, install-only review and receiving requirements |
 | `/dealership-signage/` | Car dealership banners, showroom graphics and repeat promotions | Campaign lists, artwork approval, location-by-location changes and installation windows |
 | `/sign-project-checklist/` | Preparing a useful sign quote request | Six-step original brief checklist with print styling and links to each service |
+| `/catalog/` | Signs, graphics, print and display product options | 104 original descriptions across 11 categories, product quote links and downloadable PDF; added November 3 |
 
-These are six distinct marketing pages, not city-name duplicates. Page intent is based on service fit and current search review, not paid keyword-volume data. No keyword-volume, ranking, traffic or conversion baseline has been established.
+The November 3 catalog brings the site to seven distinct marketing pages. Page intent is based on service fit and current search review, not paid keyword-volume data. No keyword-volume, ranking, traffic or conversion baseline has been established.
 
 ## Implemented
 
 - Server-rendered HTML at descriptive clean URLs. HTML and slashless aliases redirect permanently to one canonical route; query parameters do not create new canonical URLs.
-- One registry owns titles, descriptions, route mapping, absolute canonical/social URLs and the six-page sitemap. Privacy retains its original URL and is not included in the marketing sitemap.
+- One registry owns titles, descriptions, route mapping, absolute canonical/social URLs and the seven-page sitemap. Privacy retains its original URL and is not included in the marketing sitemap.
 - Linked Organization, WebSite and WebPage schema; Service entities on the four commercial service pages and visible breadcrumbs with BreadcrumbList markup on inner pages. No fake address, hours, reviews, ratings, prices or LocalBusiness rich-result claim. The known mailing address does not establish a walk-in signage location.
 - Real descriptive links from the homepage and footer to every page, plus contextual related services. Service quote buttons preselect an allowed service in the existing form; arbitrary query values are ignored.
 - Existing restrictive content-security policy retained, with a SHA-256 hash for the emitted JSON-LD. API, health and error responses explicitly use `noindex`; unknown/private routes keep real error codes.
@@ -51,3 +52,7 @@ Primary sources reviewed November 2, 2026:
 4. Reconcile signage with the actual SolidSite business identity/listing before any Google Business Profile changes. Do not invent a storefront or create duplicate listings to pursue map visibility.
 
 The code and content release is complete independently of those owner/account inputs. Ongoing quote review stays in WEB-LEADS-20261102. Automatic email alerts remain disabled.
+
+## Catalog expansion — November 3, 2026
+
+Erik requested a catalog from his open wholesale supplier sites and explicitly directed its use on the website. The catalog is a server-rendered CollectionPage with an ItemList matching all 104 visible products/services. It uses one canonical URL, links from the main site, category anchors, original copy and illustrations, and product-specific links to the existing quote form. Filters do not create indexable query variants. Supplier sources remain private; no supplier pricing, stock, turnaround promise, rating or review is published. The PDF shares the same data source. All 23 automated checks passed, including catalog completeness, escaping, source privacy and existing intake/SEO regressions; browser and publication evidence is recorded in [RELEASE.md](RELEASE.md#product-catalog--november-3-2026).

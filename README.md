@@ -61,4 +61,20 @@ Browser submissions use an idempotency key, so retrying an uncertain request wit
 - `docs/ASSETS.md`: image provenance and font/brand sources.
 - `docs/SEO.md`: page targeting, verified search improvements and remaining domain/Search Console follow-through.
 
+## Product catalog
+
+`/catalog/` contains 104 product and service listings in 11 categories, rendered on the server for search and access without JavaScript. Browser search and category filters progressively enhance the page. Each product links to the existing quote form with its name and an allowed service prefilled. The 17-page customer PDF is at `/downloads/solidsite-signs-catalog.pdf`.
+
+The shared source is `data/catalog.json`. Its `sources` fields are internal provenance: the renderer explicitly excludes them, and the server never serves the source file. Docker copies only this catalog into `/app/data`; production quote storage remains on the separate `/data` volume. Supplier research and limitations are in `docs/catalog-signs365-research.md` and `docs/catalog-b2sign-research.md`.
+
+After changing the catalog, restart the server and regenerate the PDF with Python and ReportLab available in the authoring environment:
+
+```sh
+python3 scripts/build-catalog-pdf.py
+npm test
+npm run check
+```
+
+Review rendered PDF pages before publishing. Python and ReportLab are authoring tools only; Railway serves the committed PDF without either dependency. Public copy and illustrations are original, products are quoted per project, and supplier production claims are not promises of installation capability or customer delivery dates.
+
 No recurring subscriptions, external messages, ad campaigns or customer commitments are created by running this website.

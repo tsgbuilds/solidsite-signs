@@ -10,7 +10,7 @@ import { createApp } from '../server.mjs';
 const origin = 'https://signs.example.com';
 const marketingPaths = [
   '/', '/banners-houston/', '/window-graphics-houston/', '/sign-installation-houston/',
-  '/dealership-signage/', '/sign-project-checklist/'
+  '/dealership-signage/', '/sign-project-checklist/', '/catalog/'
 ];
 
 async function fixture(t) {
@@ -60,7 +60,7 @@ test('marketing pages return distinct server-rendered metadata, safe linked sche
     const graph = schema['@graph'];
     const organization = graph.find(item => item['@type'] === 'Organization');
     const website = graph.find(item => item['@type'] === 'WebSite');
-    const webpage = graph.find(item => item['@type'] === 'WebPage');
+    const webpage = graph.find(item => ['WebPage', 'CollectionPage'].includes(item['@type']));
     assert.equal(organization.telephone, '+17139122151');
     assert.equal(organization.email, 'erik@gosolidsite.com');
     assert.equal(website.publisher['@id'], organization['@id']);

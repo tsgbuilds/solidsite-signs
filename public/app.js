@@ -35,6 +35,12 @@ const serviceField = form?.querySelector('#service');
 if (requestedService && serviceField && [...serviceField.options].some(option => option.value === requestedService)) {
   serviceField.value = requestedService;
 }
+// Product links prefill a customer-editable brief, never HTML or a destination.
+const requestedProduct = new URLSearchParams(window.location.search).get('product');
+const detailsField = form?.querySelector('#details');
+if (requestedProduct?.trim() && requestedProduct.length <= 120 && !/[\u0000-\u001f\u007f]/u.test(requestedProduct) && detailsField && !detailsField.value.trim()) {
+  detailsField.value = `Interested in: ${requestedProduct.trim()}.\n\nSize and quantity: \nProject location or surface: \nTarget date: `;
+}
 document.querySelector('.print-guide')?.addEventListener('click', () => window.print());
 document.querySelectorAll('[data-service]').forEach(link => {
   link.addEventListener('click', () => {
