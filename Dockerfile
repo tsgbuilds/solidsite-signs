@@ -8,5 +8,5 @@ COPY --chown=node:node public ./public
 RUN mkdir /data && chown node:node /data
 USER node
 EXPOSE 3000
-VOLUME ["/data"]
+# Persistent storage is attached through Railway, not a Docker VOLUME directive.
 CMD ["node", "server.mjs"]
