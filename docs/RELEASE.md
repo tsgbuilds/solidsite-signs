@@ -18,14 +18,22 @@ Browser checks covered 1440px desktop, 768px tablet, 390px phone and 320px narro
 
 The end-to-end local-only test produced reference `SS-355D12D31310` in temporary preview storage, not the production database or a customer inbox. No email or telephone call was sent. Test data is labeled test-only. Browser screenshots are retained locally under ignored `artifacts/`.
 
-## Deployment boundary
+## Railway launch and repair — November 2, 2026
 
-This is a source build, tested locally. No public deployment or domain has been configured. Before public launch, connect the intended hosting service, mount persistent storage, set the real HTTPS `SITE_URL`, and connect the private lead source to SolidSite's existing intake review. Form success means the request is saved, not that an email alert was delivered. No automatic email alert is configured. See the README for exact variables and review commands.
+The initial source-only delivery is superseded by the live deployment at **https://solidsite-signs-production.up.railway.app**. Erik explicitly authorized pushing to main and then approved a Railway volume at `/data`, capped at 5 GB, with no plan upgrade.
+
+Railway rejected the original Dockerfile with `docker VOLUME at Line 11 is not supported`. Commit `2afbd68` removed that instruction and added a regression check; all nine tests passed. Commit `5d23d6d` initializes permissions on Railway's root-owned mount before dropping to the unprivileged `node` user. The image built and deployment `90f4be1a-b875-4d84-a0e0-1538332521bb` became active. Runtime inspection confirmed PID 1 runs as `node` and `/data` is a separate mounted filesystem.
+
+Production configuration: project `lucid-smile` (`ab665d29-d4fd-49ac-842d-cf57d5e38ff8`), service `solidsite-signs` (`cd94158d-1ad4-481f-ac4c-b930ac911f64`), environment `production` (`c43297ac-8b38-408b-98cb-702160fe799e`). Deployment source is `main`; healthcheck `/healthz`; variables `SITE_URL=https://solidsite-signs-production.up.railway.app`, `DATA_DIR=/data`, `PORT=3000`. Domain target port is 3000. Railway volume `solidsite-signs-volume` (`3edfc96b-6981-4212-86c2-ee5193bae776`) is mounted at `/data`; its Settings screen confirms a 5.00 GB maximum.
+
+The live browser quote check saved reference `SS-191E34C0B05E`, timestamp `2026-11-03T04:29:33.500Z` (November 2, 10:29 PM Chicago). It is labeled **TEST ONLY — do not contact or quote**. A read-only SQLite query in Railway Console confirmed the same reference in `/data/quotes.sqlite`. Exclude this record from customer lead counts. Screenshots are retained under ignored `artifacts/`.
+
+Authorized intake review is available through this service's Railway Console: run `npm run leads` with the existing `DATA_DIR=/data`. Customer data must stay in the private console and existing SolidSite queue, never public logs or Git. The private HTTP intake API remains disabled because `ADMIN_TOKEN` is unset. Form success means a saved database record; automatic email alerts are not configured. The existing `WEB-LEADS-20261102` workflow must use the authenticated Console or report its exact access gap; no new recurring job is created.
 
 ## Outcome report
 
 1. Company/task: SolidSite / SS-SIGNS-WEB-20261102; Atlas owns this build.
-2. Status: implementation and local verification complete; publication remains pending hosting/intake configuration.
-3. Evidence: source repository, eight passing integration tests and local desktop/mobile screenshots.
-4. Next: confirm the intended deployment target and attach the persisted lead source to the existing SolidSite intake workflow; no deadline assigned.
-5. Authority: website build and shared SolidSite contacts explicitly requested. No ad activation, external outreach, customer commitment or new schedule.
+2. Status: website live on Railway with the approved persistent volume and production settings.
+3. Evidence: nine passing tests, active Railway deployment, live quote receipt and database readback; desktop/mobile screenshots retained locally.
+4. Next: existing website-lead workflow reviews this live source through Railway Console; no automatic email alert or new deadline.
+5. Authority: website build, shared SolidSite contacts, main push, build repair and 5 GB volume explicitly authorized. No ad activation, outreach, customer commitment or new schedule.
