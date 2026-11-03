@@ -54,8 +54,10 @@ Browser submissions use an idempotency key, so retrying an uncertain request wit
 
 - `public/`: site and static assets.
 - `server.mjs`, `lib/quotes.mjs`: HTTP server, validation and persistence.
+- `lib/seo.mjs`: canonical page registry, metadata, structured data and sitemap. Registered HTML files use `<!-- SEO_HEAD -->`; the server renders it into the response.
 - `tests/`: integration tests for lead storage, retries, privacy boundaries and failure cases.
 - `docs/DESIGN.md`: design decisions and factual content boundaries.
 - `docs/ASSETS.md`: image provenance and font/brand sources.
+- `docs/SEO.md`: page targeting, verified search improvements and remaining domain/Search Console follow-through.
 
 No recurring subscriptions, external messages, ad campaigns or customer commitments are created by running this website.

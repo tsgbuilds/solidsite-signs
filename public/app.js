@@ -30,6 +30,12 @@ window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
 
 const form = document.querySelector('#quote-form');
 const success = document.querySelector('#form-success');
+const requestedService = new URLSearchParams(window.location.search).get('service');
+const serviceField = form?.querySelector('#service');
+if (requestedService && serviceField && [...serviceField.options].some(option => option.value === requestedService)) {
+  serviceField.value = requestedService;
+}
+document.querySelector('.print-guide')?.addEventListener('click', () => window.print());
 document.querySelectorAll('[data-service]').forEach(link => {
   link.addEventListener('click', () => {
     if (!form) return;

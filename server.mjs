@@ -4,11 +4,13 @@ import { dirname, extname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { timingSafeEqual } from 'node:crypto';
 import { openQuoteStore, validateQuote } from './lib/quotes.mjs';
+import { canonicalRedirect, findSeoPage, renderSeoHead, renderSitemap } from './lib/seo.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+const contentSecurityPolicy = scriptHash => `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
 
 function equalSecret(value, expected) {
   if (!value || !expected || expected.length < 32) return false;
@@ -51,21 +53,24 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
     res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'");
+    res.setHeader('Content-Security-Policy', contentSecurityPolicy());
     if (siteOrigin.startsWith('https://')) res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     const json = (status, body) => {
+      if (status >= 400) res.setHeader('X-Robots-Tag', 'noindex');
       res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
-      res.end(JSON.stringify(body));
+      res.end(req.method === 'HEAD' ? undefined : JSON.stringify(body));
     };
     const html = (status, body) => {
+      if (status >= 400) res.setHeader('X-Robots-Tag', 'noindex');
       res.writeHead(status, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
-      res.end(body);
+      res.end(req.method === 'HEAD' ? undefined : body);
     };
     const wantsJson = req.headers.accept?.includes('application/json') || req.headers['content-type']?.startsWith('application/json');
     const fail = (status, message) => wantsJson ? json(status, { error: message }) : html(status, errorPage(message));
     try {
       const url = new URL(req.url, 'http://localhost');
-      if (url.pathname === '/healthz' && req.method === 'GET') return json(200, { ok: true });
+      if (url.pathname.startsWith('/api/') || url.pathname === '/healthz') res.setHeader('X-Robots-Tag', 'noindex');
+      if (url.pathname === '/healthz' && ['GET', 'HEAD'].includes(req.method)) return json(200, { ok: true });
       if (url.pathname === '/api/admin/leads') {
         if (req.method !== 'GET') return json(405, { error: 'Method not allowed.' });
         const token = req.headers.authorization?.replace(/^Bearer /, '');
@@ -100,22 +105,31 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
       if (!['GET', 'HEAD'].includes(req.method)) { res.setHeader('Allow', 'GET, HEAD'); return json(405, { error: 'Method not allowed.' }); }
       if (url.pathname === '/robots.txt') {
         res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-        return res.end(`User-agent: *\nDisallow: /api/\n${siteOrigin ? `Sitemap: ${siteOrigin}/sitemap.xml\n` : ''}`);
+        return res.end(req.method === 'HEAD' ? undefined : `User-agent: *\nDisallow: /api/\n${siteOrigin ? `Sitemap: ${siteOrigin}/sitemap.xml\n` : ''}`);
       }
       if (url.pathname === '/sitemap.xml' && siteOrigin) {
         res.writeHead(200, { 'Content-Type': TYPES['.xml'] });
-        return res.end(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${escapeHtml(siteOrigin)}/</loc></url><url><loc>${escapeHtml(siteOrigin)}/privacy.html</loc></url></urlset>`);
+        return res.end(req.method === 'HEAD' ? undefined : renderSitemap(siteOrigin));
       }
       let pathname;
       try { pathname = decodeURIComponent(url.pathname); } catch { return fail(400, 'Invalid page address.'); }
       if (pathname.split('/').some(segment => segment.startsWith('.') || segment.includes('\\')) || pathname.includes('\0')) return fail(404, 'This page could not be found.');
-      const path = resolve(PUBLIC, `.${pathname === '/' ? '/index.html' : pathname}`);
+      const redirect = canonicalRedirect(pathname);
+      if (redirect) {
+        // Redirect destinations come only from the registry, never query input.
+        res.writeHead(308, { Location: `${redirect}${url.search}` });
+        return res.end();
+      }
+      const page = findSeoPage(pathname);
+      const path = resolve(PUBLIC, page ? page.file : `.${pathname}`);
       if (!path.startsWith(PUBLIC + sep) || !TYPES[extname(path)]) return fail(404, 'This page could not be found.');
+      if (extname(path) === '.html' && !page) return fail(404, 'This page could not be found.');
       let content;
       try { content = await readFile(path); } catch { return fail(404, 'This page could not be found.'); }
-      if (extname(path) === '.html' && siteOrigin) {
-        const canonical = escapeHtml(`${siteOrigin}${pathname === '/index.html' ? '/' : pathname}`);
-        content = Buffer.from(content.toString().replace('</head>', `<link rel="canonical" href="${canonical}"></head>`).replace('content="/assets/storefront.webp"', `content="${escapeHtml(siteOrigin)}/assets/storefront.webp"`));
+      if (page) {
+        const seo = renderSeoHead(page, siteOrigin);
+        content = Buffer.from(content.toString().replace('<!-- SEO_HEAD -->', seo.head));
+        res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
       }
       res.writeHead(200, { 'Content-Type': TYPES[extname(path)], 'Content-Length': content.length, 'Cache-Control': pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache' });
       res.end(req.method === 'HEAD' ? undefined : content);

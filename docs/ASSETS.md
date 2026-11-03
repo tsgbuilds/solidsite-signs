@@ -15,3 +15,5 @@ Final generation prompt:
 ## Brand and type
 
 The outlined SolidSite wordmark and symbol are from Erik's approved SolidSite brand kit dated October 15, 2026. The Signs descriptor is separate from the original wordmark. Barlow and Barlow Condensed are self-hosted with SIL Open Font License copies under `public/assets/fonts/`.
+
+November 2 SEO update: the three original TTF fonts were losslessly repackaged as WOFF2 using fontTools 4.60.2 in a temporary authoring environment. No font dependency is needed at runtime. Original fonts and license files are retained; CSS and preload links request WOFF2. Combined font transfer falls from 323,244 to 117,164 bytes (63.8% smaller), preserving the full glyph set.
