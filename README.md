@@ -23,12 +23,14 @@ The storefront photograph is an AI-generated concept, labeled on the page. Servi
 
 ## Production hosting
 
-`Dockerfile` and `railway.json` support a conventional container host. **Mount persistent storage at `/data`** and set:
+`Dockerfile` supports a conventional container host. On Railway, connect the repository's `main` branch, use the detected Dockerfile, attach a Railway volume at `/data` (5 GB maximum), and set the service healthcheck to `/healthz` in the dashboard. New Railway services cannot use the legacy `railway.json` configuration. Do not add a Docker `VOLUME` instruction: Railway rejects it. The container entrypoint initializes the mounted directory's permissions and then runs Node as the unprivileged `node` user.
+
+Set these service variables:
 
 - `NODE_ENV=production`
 - `DATA_DIR=/data`
 - `SITE_URL=https://your-confirmed-domain.example` (actual deployed HTTPS origin; no path)
-- `PORT` as provided by the host; `HOST=0.0.0.0`
+- `PORT=3000` with the public domain's target port also set to `3000`; `HOST=0.0.0.0`
 - `ADMIN_TOKEN` to a random secret at least 32 characters long if the private intake API is needed.
 - `TRUST_PROXY=1` only if the hosting proxy replaces `X-Forwarded-For` with trusted client information. Default is off.
 
