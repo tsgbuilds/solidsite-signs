@@ -37,3 +37,13 @@ Authorized intake review is available through this service's Railway Console: ru
 3. Evidence: nine passing tests, active Railway deployment, live quote receipt and database readback; desktop/mobile screenshots retained locally.
 4. Next: existing website-lead workflow reviews this live source through Railway Console; no automatic email alert or new deadline.
 5. Authority: website build, shared SolidSite contacts, main push, build repair and 5 GB volume explicitly authorized. No ad activation, outreach, customer commitment or new schedule.
+
+## SEO enhancement — November 2, 2026
+
+Erik requested stronger SEO and differentiation after launch. Implementation commit `e7142c0` was pushed to main and the review branch; Railway deployment `c449170c-c9ed-4b11-8ff0-8e2febbce49e` became active. The existing origin remains https://solidsite-signs-production.up.railway.app.
+
+Four substantive service pages and a project checklist now support the homepage. The service pages target Houston banners, window graphics, installation and car-dealership campaigns, with direct Erik/project-coordination positioning. A central route/metadata registry supplies canonical URLs, page titles/descriptions, social metadata, structured data and a six-page sitemap. WOFF2 reduces the existing font transfer by 63.8%. Full rationale, page map, source links and remaining domain/Search Console inputs are in [SEO.md](SEO.md).
+
+Fourteen automated checks passed, including the existing quote-storage/security checks. All six marketing pages were inspected at 320- and 768-pixel widths without horizontal overflow, with desktop and 390-pixel visual checks and successful local service-prefilled form submission. Google’s [live Rich Results Test](https://search.google.com/test/rich-results/result?id=VW3KV76oVZb1mAWSEMypfg) crawled the dealership page on November 2 at 10:43:58 PM Chicago and reported three valid items: breadcrumbs, organization and the organization entity also classified under local businesses. No critical errors. Optional address/image notes remain; a storefront address or real-project image was not invented to remove them. This validates the test fetch and markup, not indexing or rankings.
+
+No new production inquiry test, tracking script, paid campaign or scheduler was introduced. Existing persistent quote storage, approved contacts and intake ownership remain in use.
