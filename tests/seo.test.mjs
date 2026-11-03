@@ -150,3 +150,19 @@ test('HEAD supports canonical pages, crawl files and health without response bod
   assert.equal(alias.status, 308);
   assert.equal(alias.headers.get('location'), '/banners-houston/');
 });
+
+test('HTML uses content-versioned scripts and styles so returning visitors get current assets', async t => {
+  const base = await fixture(t);
+  for (const path of ['/', '/catalog/', '/not-a-page/']) {
+    const html = await (await fetch(base + path)).text();
+    assert.doesNotMatch(html, /(?:src|href)="\/(?:app\.js|styles\.css|catalog\.js|catalog\.css)"/);
+    const assets = [...html.matchAll(/(?:src|href)="(\/(?:app\.js|styles\.css|catalog\.js|catalog\.css)\?v=([a-f0-9]{16}))"/g)];
+    assert.ok(assets.length, path);
+    for (const [, url, version] of assets) {
+      const response = await fetch(base + url);
+      assert.equal(response.status, 200, url);
+      const bytes = Buffer.from(await response.arrayBuffer());
+      assert.equal(createHash('sha256').update(bytes).digest('hex').slice(0, 16), version);
+    }
+  }
+});

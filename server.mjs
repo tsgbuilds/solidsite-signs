@@ -2,13 +2,20 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { dirname, extname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { timingSafeEqual } from 'node:crypto';
+import { createHash, timingSafeEqual } from 'node:crypto';
 import { openQuoteStore, validateQuote } from './lib/quotes.mjs';
 import { canonicalRedirect, findSeoPage, renderSeoHead, renderSitemap } from './lib/seo.mjs';
 import { getCatalog, renderCatalog } from './lib/catalog.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
+// A changed asset gets a new URL even when a browser or CDN retains an old copy.
+const assetVersions = Object.fromEntries(await Promise.all(
+  ['app.js', 'styles.css', 'catalog.js', 'catalog.css'].map(async name => [name,
+    createHash('sha256').update(await readFile(resolve(PUBLIC, name))).digest('hex').slice(0, 16)])
+));
+const versionAssets = html => html.replace(/(src|href)="\/(app\.js|styles\.css|catalog\.js|catalog\.css)"/g,
+  (_, attribute, name) => `${attribute}="/${name}?v=${assetVersions[name]}"`);
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.pdf': 'application/pdf' };
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const contentSecurityPolicy = scriptHash => `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
@@ -74,7 +81,7 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
     const html = (status, body) => {
       if (status >= 400) res.setHeader('X-Robots-Tag', 'noindex');
       res.writeHead(status, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
-      res.end(req.method === 'HEAD' ? undefined : body);
+      res.end(req.method === 'HEAD' ? undefined : versionAssets(body));
     };
     const wantsJson = req.headers.accept?.includes('application/json') || req.headers['content-type']?.startsWith('application/json');
     const fail = (status, message) => wantsJson ? json(status, { error: message }) : html(status, errorPage(message));
@@ -151,7 +158,7 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
         const seo = renderSeoHead(page, siteOrigin, catalog);
         let html = content.toString().replace('<!-- SEO_HEAD -->', seo.head);
         if (catalog) html = html.replace('<!-- CATALOG_PRODUCTS -->', renderCatalog(catalog));
-        content = Buffer.from(html);
+        content = Buffer.from(versionAssets(html));
         res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
       }
       if (extname(path) === '.pdf') res.setHeader('X-Robots-Tag', 'noindex');

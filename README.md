@@ -15,6 +15,8 @@ npm test
 
 The server serves only `public/`. Lead data, documentation, source and environment files are never public assets. `.env` files are not loaded automatically: set environment variables in the host or use Node's `--env-file` flag explicitly.
 
+Rendered pages use content-hash query versions for the JavaScript and CSS files. This prevents returning visitors from receiving an outdated quote-form script or layout after deployment, even when the CDN extends browser caching. Asset hashes are computed at startup; restart after changing frontend files.
+
 ## Contacts and content
 
 Per Erik's November 2, 2026 direction, use the same contact details as SolidSite Services: **(713) 912-2151**, **erik@gosolidsite.com**. Signage inquiries remain SolidSite records; they must not be sent from another company's account. The site does not send emails automatically. Artwork links open the visitor's email app addressed to the approved SolidSite mailbox.
