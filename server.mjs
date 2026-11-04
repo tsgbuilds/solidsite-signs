@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash, timingSafeEqual } from 'node:crypto';
 import { openQuoteStore, validateQuote } from './lib/quotes.mjs';
 import { canonicalRedirect, findSeoPage, renderSeoHead, renderSitemap } from './lib/seo.mjs';
+import { cleanCampaign } from './lib/campaign.mjs';
 import { getCatalog, quoteUrl, renderCatalog } from './lib/catalog.mjs';
 import { renderProductDetail } from './lib/product-view.mjs';
 
@@ -158,6 +159,12 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
         const catalog = page.catalog ? getCatalog() : undefined;
         const seo = renderSeoHead(page, siteOrigin, catalog);
         let html = content.toString().replace('<!-- SEO_HEAD -->', seo.head);
+        // Render current attribution into the form for visitors submitting without JS.
+        // A first-party session also carries the latest tagged visit through internal navigation.
+        const campaign = cleanCampaign({ ...Object.fromEntries(url.searchParams), landing_path: pathname });
+        const encoded = campaign ? escapeHtml(JSON.stringify(campaign)) : '';
+        if (encoded) html = html.replace('</head>', () => `<meta name="signs-visit" content="${encoded}"></head>`);
+        html = html.replace('<!-- QUOTE_CAMPAIGN -->', () => `<input type="hidden" name="campaign_context" value="${encoded}">`);
         if (catalog) html = html.replace('<!-- CATALOG_PRODUCTS -->', renderCatalog(catalog));
         if (page.item) html = html
           .replaceAll('__PRODUCT_QUOTE_URL__', () => escapeHtml(quoteUrl(page.item)))
@@ -166,7 +173,7 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
         res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
       }
       if (extname(path) === '.pdf') res.setHeader('X-Robots-Tag', 'noindex');
-      res.writeHead(200, { 'Content-Type': TYPES[extname(path)], 'Content-Length': content.length, 'Cache-Control': pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache' });
+      res.writeHead(200, { 'Content-Type': TYPES[extname(path)], 'Content-Length': content.length, 'Cache-Control': page && url.search ? 'private, no-store' : pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache' });
       res.end(req.method === 'HEAD' ? undefined : content);
     } catch (error) {
       if (res.headersSent) return res.end();

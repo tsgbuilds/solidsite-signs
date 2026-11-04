@@ -30,9 +30,16 @@ window.matchMedia('(min-width: 901px)').addEventListener('change', event => {
 
 const form = document.querySelector('#quote-form');
 const success = document.querySelector('#form-success');
+const taggedVisit = document.querySelector('meta[name="signs-visit"]')?.content;
+const campaignField = form?.elements.namedItem('campaign_context');
+try {
+  const storageKey = 'solidsite-signs:last-tagged-visit';
+  if (taggedVisit) sessionStorage.setItem(storageKey, taggedVisit);
+  if (campaignField) campaignField.value = taggedVisit || sessionStorage.getItem(storageKey) || '';
+} catch { /* Storage optional; first-page form keeps the server-rendered attribution. */ }
 const requestedService = new URLSearchParams(window.location.search).get('service');
 const serviceField = form?.querySelector('#service');
-if (requestedService && serviceField && [...serviceField.options].some(option => option.value === requestedService)) {
+if (requestedService && serviceField?.options && [...serviceField.options].some(option => option.value === requestedService)) {
   serviceField.value = requestedService;
 }
 // Product links prefill a customer-editable brief, never HTML or a destination.
@@ -64,6 +71,7 @@ form?.addEventListener('submit', async event => {
   // A timed-out retry uses the same key; an edited request becomes a new submission.
   if (submittedPayload !== null && submittedPayload !== payload) requestId = crypto.randomUUID();
   submittedPayload = payload;
+  const originalLabel = label.textContent;
   button.disabled = true;
   label.textContent = 'Sending your request…';
   error.hidden = true;
@@ -86,6 +94,7 @@ form?.addEventListener('submit', async event => {
     success.focus({ preventScroll: true });
     success.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
     form.reset();
+    if (campaignField && values.campaign_context) campaignField.value = values.campaign_context;
     requestId = crypto.randomUUID();
     submittedPayload = null;
   } catch (failure) {
@@ -96,7 +105,7 @@ form?.addEventListener('submit', async event => {
   } finally {
     clearTimeout(timeout);
     button.disabled = false;
-    label.textContent = 'Request a quote';
+    label.textContent = originalLabel;
   }
 });
 

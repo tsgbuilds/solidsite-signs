@@ -89,3 +89,13 @@
 
 /* The full product catalog is a primary route from every page. */
 .catalog-teaser{display:grid;grid-template-columns:1fr 1fr;gap:80px;border-top:1px solid var(--line);padding-block:64px 80px}.catalog-teaser h2{font-size:60px}.catalog-teaser p:not(.eyebrow){max-width:54ch;color:var(--muted);margin-bottom:25px}.catalog-teaser .button{font-size:16px}@media(max-width:650px){.catalog-teaser{grid-template-columns:1fr;gap:25px;padding-block:45px 55px}.catalog-teaser h2{font-size:49px}}
+
+.banner-hero-note{margin-top:12px;font-size:15px;color:var(--muted)}
+#banner-quote{scroll-margin-top:100px}
+.banner-quote .form-topline h3{max-width:none}
+@media(max-width:600px){#banner-quote{scroll-margin-top:84px}.banner-quote{padding-block:40px}.banner-quote .quote-copy h2{font-size:50px}}
+
+.banner-product{margin:0;min-width:0;background:var(--ivory);border:1px solid var(--line)}
+.banner-product img{display:block;width:100%;height:clamp(190px,24vw,325px);object-fit:contain;background:#fff}
+.banner-product figcaption{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 18px;padding:10px 14px;font-size:14px}
+.banner-product figcaption a{text-decoration:underline;text-underline-offset:3px}

@@ -125,3 +125,26 @@ test('homepage, contact identity, assets, privacy and canonical metadata are ser
   assert.match(await (await fetch(`${f.url}/robots.txt`)).text(), /Disallow: \/api\//);
   assert.equal((await fetch(f.url, { method: 'HEAD' })).status, 200);
 });
+
+test('banner landing preserves a tagged native form save without leaking arbitrary query fields', async t => {
+  const f = await fixture(t);
+  const response = await fetch(f.url + '/banners-houston/?utm_source=google&utm_medium=cpc&utm_campaign=banners-test&gclid=Demo-123&private=ignore-me&utm_content=joe%40example.com');
+  assert.match(response.headers.get('cache-control'), /private, no-store/);
+  const landing = await response.text();
+  assert.match(landing, /href="#banner-quote"/);
+  const hidden = landing.match(/name="campaign_context" value="([^"]+)"/)[1].replaceAll('&quot;', '"');
+  const campaign = {utm_source:'google',utm_medium:'cpc',utm_campaign:'banners-test',gclid:'Demo-123',landing_path:'/banners-houston/'};
+  assert.deepEqual(JSON.parse(hidden), campaign);
+  assert.doesNotMatch(landing, /ignore-me|joe@example/);
+  const form = new URLSearchParams({...sample,campaign_context:hidden});
+  const saved = await fetch(f.url+'/api/quotes',{method:'POST',body:form});
+  assert.equal(saved.status,201);
+  const receipt = (await saved.text()).match(/SS-[A-F0-9]{12}/)[0];
+  const stored = (await leads(f.url)).leads;
+  assert.equal(stored.length,1);
+  assert.equal(stored[0].reference,receipt);
+  assert.deepEqual(stored[0].campaign,campaign);
+  // Unknown or malformed tracking must not prevent a real customer from sending a quote.
+  assert.equal((await post(f.url,{...sample,campaign_context:'malformed'})).status,201);
+  assert.equal((await leads(f.url)).leads.find(x=>x.reference!==receipt).campaign,undefined);
+});
