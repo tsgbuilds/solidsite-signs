@@ -5,7 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { createHash, timingSafeEqual } from 'node:crypto';
 import { openQuoteStore, validateQuote } from './lib/quotes.mjs';
 import { canonicalRedirect, findSeoPage, renderSeoHead, renderSitemap } from './lib/seo.mjs';
-import { getCatalog, renderCatalog } from './lib/catalog.mjs';
+import { getCatalog, quoteUrl, renderCatalog } from './lib/catalog.mjs';
+import { renderProductDetail } from './lib/product-view.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
@@ -158,6 +159,9 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
         const seo = renderSeoHead(page, siteOrigin, catalog);
         let html = content.toString().replace('<!-- SEO_HEAD -->', seo.head);
         if (catalog) html = html.replace('<!-- CATALOG_PRODUCTS -->', renderCatalog(catalog));
+        if (page.item) html = html
+          .replaceAll('__PRODUCT_QUOTE_URL__', () => escapeHtml(quoteUrl(page.item)))
+          .replace('<!-- PRODUCT_DETAIL -->', () => renderProductDetail(page.item, page.category));
         content = Buffer.from(versionAssets(html));
         res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
       }

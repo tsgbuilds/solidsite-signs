@@ -9,7 +9,7 @@
     "dev": "node --watch server.mjs",
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check server.mjs && node --check public/app.js && node --check lib/quotes.mjs && node --check lib/seo.mjs && node --check lib/catalog.mjs && node --check public/catalog.js",
+    "check": "node --check server.mjs && node --check public/app.js && node --check lib/quotes.mjs && node --check lib/seo.mjs && node --check lib/catalog.mjs && node --check lib/product-view.mjs && node --check lib/product-guides.mjs && node --check public/catalog.js",
     "leads": "node scripts/leads.mjs"
   }
 }

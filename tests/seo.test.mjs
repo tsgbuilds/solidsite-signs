@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, rm } from 'node:fs/promises';
+import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
@@ -93,7 +93,16 @@ test('sitemap includes only canonical marketing URLs and robots points to it', a
   assert.match(response.headers.get('content-type'), /application\/xml/);
   const sitemap = await response.text();
   const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-  assert.deepEqual(urls.sort(), marketingPaths.map(path => origin + path).sort());
+  const source = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url), 'utf8'));
+  const detailPaths = source.categories.flatMap(category => category.items.map(item => `/catalog/${item.id}/`));
+  assert.ok(detailPaths.length >= 104, 'The sitemap covers the full released catalog');
+  assert.deepEqual(urls.sort(), [...marketingPaths, ...detailPaths].map(path => origin + path).sort());
+  const productImages = new Map(Array.from(sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<image:image>\s*<image:loc>([^<]+)<\/image:loc>/g), match => [match[1], match[2]]));
+  for (const category of source.categories) {
+    for (const item of category.items) {
+      assert.equal(productImages.get(`${origin}/catalog/${item.id}/`), `${origin}/assets/products/${item.id}.webp`, item.id);
+    }
+  }
   assert.doesNotMatch(sitemap, /\.html|\/api\/|\/healthz|utm_/);
   const robots = await (await fetch(`${base}/robots.txt`)).text();
   assert.match(robots, /^User-agent: \*/);
@@ -105,6 +114,7 @@ test('page aliases permanently redirect to internal canonical routes with query 
   const base = await fixture(t);
   const aliases = [
     ['/index.html', '/'],
+    ['/catalog/vinyl-banners', '/catalog/vinyl-banners/'],
     ...marketingPaths.filter(path => path !== '/').flatMap(path => [
       [path.slice(0, -1), path], [path.slice(0, -1) + '.html', path]
     ])
@@ -121,7 +131,7 @@ test('page aliases permanently redirect to internal canonical routes with query 
 
 test('unknown and private routes retain real noindex errors; health and API are not indexable', async t => {
   const base = await fixture(t);
-  for (const path of ['/nonexistent/', '/nonexistent.html', '/banners-houston/secrets.html', '/lib/seo.mjs', '/data/quotes.sqlite', '/.env', '/%2f%2funtrusted.example', '/assets/%2e%2e%2f%2e%2e%2f.env']) {
+  for (const path of ['/nonexistent/', '/nonexistent.html', '/catalog/not-in-catalog/', '/catalog/not-in-catalog', '/catalog/vinyl-banners/extra/', '/product.html', '/lib/product-guides.mjs', '/banners-houston/secrets.html', '/lib/seo.mjs', '/data/quotes.sqlite', '/.env', '/%2f%2funtrusted.example', '/assets/%2e%2e%2f%2e%2e%2f.env']) {
     const response = await fetch(base + path, { redirect: 'manual' });
     assert.equal(response.status, 404, path);
     assert.equal(response.headers.get('x-robots-tag'), 'noindex', path);
@@ -141,7 +151,7 @@ test('unknown and private routes retain real noindex errors; health and API are 
 
 test('HEAD supports canonical pages, crawl files and health without response bodies', async t => {
   const base = await fixture(t);
-  for (const path of [...marketingPaths, '/privacy.html', '/robots.txt', '/sitemap.xml', '/healthz']) {
+  for (const path of [...marketingPaths, '/catalog/vinyl-banners/', '/privacy.html', '/robots.txt', '/sitemap.xml', '/healthz']) {
     const response = await fetch(base + path, { method: 'HEAD' });
     assert.equal(response.status, 200, path);
     assert.equal(await response.text(), '', path);

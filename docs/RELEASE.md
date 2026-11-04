@@ -112,3 +112,11 @@ The TSG browser connection exposed the signed-in Signs365 catalog on refresh. Al
 The customer PDF has been rebuilt with the final images. All 29 automated checks pass, including all 104 WebP routes, private source isolation, PDF download content version, quote flow and persistent storage. Syntax and whitespace checks pass. Earlier staged and login-blocked statuses are superseded. The existing website task records the final deployed commit and production readback.
 
 Final PDF QA: all 32 rendered pages reviewed. All 104 product image placements match their intended source conversions, all 104 quote links encode the expected product/service, and all 11 contents links/bookmarks reach the correct category. The PDF is 7,529,032 bytes; SHA-256 `81f4b180b3356c0fe5ec40719ec1e7fe1cfc2c510c7856e3ca2f22c7b656921c`.
+
+## Dedicated Houston catalog pages — November 3, 2026
+
+SolidSite Signs / SS-SIGNS-WEB-20261102, Atlas. Erik requested an individual page for each product so Houston customers could discover specific signs through search. The release creates 104 server-rendered detail pages: 99 products and five services. Each URL is linked from the catalog title and exposes its own heading, image, options, selection notes, quote brief, related items and prefilled contact path. Four existing Houston service guides add relevant links to specific formats. The original catalog, image viewer, PDF and quote storage remain available.
+
+The sitemap now lists 111 canonical marketing URLs, including the 104 detail pages and their primary images. Pages use product-specific titles, descriptions, image cards, breadcrumb markup and linked Product/Service entities. The shared HTML template is not a public route; unknown IDs are genuine noindex 404s. The final check covers every entry plus the quote, privacy, alias and storage regressions. Desktop and 320-pixel phone checks confirmed the layout and the selected product reached the quote form without creating a lead.
+
+[SEO implementation and indexing boundary](SEO.md#houston-product-and-service-pages--november-3-2026). The connected business Google account lacks access to the domain property, so no Search Console submission or Google indexing is claimed. The existing website task records the production commit and verification; no new recurring work or paid campaign was created.

@@ -22,6 +22,9 @@ async function fixture(t) {
 }
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+const decodeHtml = value => value.replace(/&(amp|lt|gt|quot|#39);/g, (_, entity) => ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'" })[entity]);
+const visibleText = html => decodeHtml(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+const hrefs = html => Array.from(html.matchAll(/<a\b[^>]*?\bhref="([^"]+)"[^>]*>/gi), match => decodeHtml(match[1]));
 
 test('catalog exposes the complete sourced product selection without exposing supplier provenance', async t => {
   const base = await fixture(t);
@@ -35,9 +38,11 @@ test('catalog exposes the complete sourced product selection without exposing su
   for (const category of catalog.categories) {
     assert.ok(html.includes(`id="category-${category.id}"`));
     for (const item of category.items) {
-      assert.ok(html.includes(`<h3>${escapeHtml(item.name)}</h3>`), item.name);
       const imagePath = `/assets/products/${item.id}.webp`;
       const card = html.match(new RegExp(`<article class="catalog-product" id="product-${item.id}"[^]*?</article>`))[0];
+      assert.equal(visibleText(card.match(/<h3\b[^>]*>([^]*?)<\/h3>/)[1]), item.name);
+      assert.ok(hrefs(card).includes(`/catalog/${item.id}/`), `${item.name} has a crawlable detail link`);
+      assert.ok(hrefs(card).includes(quoteUrl(item)), `${item.name} keeps its direct quote link`);
       assert.ok(card.includes(`href="${imagePath}" data-product-image`), `${item.name} has a direct image link without JavaScript`);
       assert.ok(card.includes(`<img src="${imagePath}" width="640" height="480" loading="lazy" decoding="async"`), `${item.name} has a lazy product image with reserved space`);
       assert.ok(card.includes(`alt="${escapeHtml(item.name)} — ${escapeHtml(item.imageLabel.toLowerCase())}"`), `${item.name} has a specific image description`);
@@ -57,10 +62,84 @@ test('catalog exposes the complete sourced product selection without exposing su
   assert.equal(collection.mainEntity['@id'], list['@id']);
   assert.equal(list.numberOfItems, catalog.count);
   assert.equal(list.itemListElement.length, catalog.count);
-  assert.ok(list.itemListElement.every(item => item.url.startsWith('https://solidsitesigns.com/catalog/#product-')));
+  assert.deepEqual(list.itemListElement.map(entry => [entry.name, entry.url]),
+    catalog.categories.flatMap(category => category.items.map(item => [item.name, `https://solidsitesigns.com/catalog/${item.id}/`])));
   assert.match(html, /<dialog[^>]+aria-labelledby="catalog-image-title" aria-describedby="catalog-image-note"/);
   assert.match(html, /<form method="dialog"><button[^>]+aria-label="Close product image"/);
   assert.match(html, /Product examples\. Your artwork, size, finish and included hardware are confirmed with your quote\./);
+});
+
+test('every detail route serves its catalog entry, selection guidance, photograph and actionable quote without JavaScript', async t => {
+  const base = await fixture(t);
+  const source = JSON.parse(await readFile(new URL('../data/catalog.json', import.meta.url), 'utf8'));
+  const { productGuides } = await import('../lib/product-guides.mjs');
+  const origin = 'https://solidsitesigns.com';
+  const titles = new Set();
+  const descriptions = new Set();
+  let total = 0;
+
+  for (const category of source.categories) {
+    for (const item of category.items) {
+      const path = `/catalog/${item.id}/`;
+      const canonical = origin + path;
+      const imagePath = `/assets/products/${item.id}.webp`;
+      const response = await fetch(base + path + '?utm_source=detail-test', { headers: { 'x-forwarded-host': 'untrusted.example' } });
+      assert.equal(response.status, 200, path);
+      assert.match(response.headers.get('content-type'), /text\/html/);
+      assert.doesNotMatch(response.headers.get('x-robots-tag') || '', /noindex/i);
+      const html = await response.text();
+      const main = html.match(/<main\b[^>]*>([^]*?)<\/main>/i)?.[1];
+      assert.ok(main, `${path} renders its main content in the response`);
+      const headings = [...main.matchAll(/<h1\b[^>]*>([^]*?)<\/h1>/gi)];
+      assert.equal(headings.length, 1, path);
+      assert.ok(visibleText(headings[0][1]).toLowerCase().includes(item.name.toLowerCase()), `${path} identifies the item in its heading`);
+      const text = visibleText(main);
+      const guide = productGuides[item.id];
+      assert.ok(guide?.selection && guide?.brief, `${path} has selection and quote guidance`);
+      for (const field of [item.description, item.options, guide.selection, guide.brief].flat().filter(Boolean)) {
+        assert.ok(text.includes(field), `${path} is missing visible copy: ${field}`);
+      }
+      assert.match(text, /\bHouston\b/i, path);
+      const figure = [...main.matchAll(/<figure\b[^>]*>([^]*?)<\/figure>/gi)].find(match => match[1].includes(`src="${imagePath}"`));
+      assert.ok(figure, `${path} shows the correct photograph`);
+      const caption = figure[1].match(/<figcaption\b[^>]*>([^]*?)<\/figcaption>/i);
+      assert.ok(caption && visibleText(caption[1]).includes(item.imageLabel), `${path} labels the photograph`);
+      const links = hrefs(main).map(href => new URL(href, canonical));
+      assert.ok(links.some(link => link.origin === origin && link.pathname === '/catalog/'), `${path} links back to the catalog`);
+      assert.ok(category.items.some(sibling => sibling.id !== item.id && links.some(link => link.href === `${origin}/catalog/${sibling.id}/`)), `${path} links to another product in its category`);
+      assert.ok(links.some(link => link.origin === origin && link.pathname === '/' && link.hash === '#quote' &&
+        link.searchParams.get('product') === item.name && link.searchParams.get('service') === item.service), `${path} links to a quote for this item`);
+
+      const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+      const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1];
+      assert.ok(title?.trim() && description?.trim(), `${path} has a title and description`);
+      titles.add(decodeHtml(title));
+      descriptions.add(decodeHtml(description));
+      total++;
+      assert.deepEqual(Array.from(html.matchAll(/<link rel="canonical" href="([^"]+)"/gi), match => match[1]), [canonical], path);
+      assert.ok(html.includes(`<meta property="og:image" content="${origin}${imagePath}">`), `${path} uses its own photo when shared`);
+      assert.doesNotMatch(html, /signs365\.com|b2sign\.com|catalog\.bs\.run|utm_source=detail-test|untrusted\.example|<!-- SEO_HEAD -->/i, path);
+
+      const script = html.match(/<script type="application\/ld\+json">([^]*?)<\/script>/i)?.[1];
+      assert.ok(script, `${path} includes structured data`);
+      const graph = JSON.parse(script)['@graph'];
+      const webpage = graph.find(node => node['@type'] === 'WebPage' && node.url === canonical);
+      assert.ok(webpage?.mainEntity, `${path} identifies the item as the main entity`);
+      const entity = graph.find(node => node['@id'] === webpage.mainEntity['@id']) || webpage.mainEntity;
+      assert.equal(entity['@type'], category.id === 'services' ? 'Service' : 'Product', path);
+      assert.equal(entity.name, item.name, path);
+      assert.equal(entity.image, origin + imagePath, path);
+      assert.doesNotMatch(script, /"(?:offers|price|priceRange|lowPrice|highPrice|review|reviews|aggregateRating|reviewCount)"\s*:/i, path);
+      const breadcrumb = graph.find(node => node['@type'] === 'BreadcrumbList');
+      assert.deepEqual(breadcrumb?.itemListElement.map(entry => entry.item), [origin + '/', origin + '/catalog/', `${origin}/catalog/#category-${category.id}`, canonical], path);
+      const csp = response.headers.get('content-security-policy');
+      assert.ok(csp.includes(`'sha256-${createHash('sha256').update(script).digest('base64')}'`), `${path} permits its exact schema script`);
+      assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval/, path);
+    }
+  }
+  assert.ok(total >= 104, 'All released catalog entries are covered');
+  assert.equal(titles.size, total, 'Every item has a unique title');
+  assert.equal(descriptions.size, total, 'Every item has a unique description');
 });
 
 test('every catalog product image is served as a complete WebP asset', async t => {
