@@ -18,8 +18,16 @@ The outlined SolidSite wordmark and symbol are from Erik's approved SolidSite br
 
 November 2 SEO update: the three original TTF fonts were losslessly repackaged as WOFF2 using fontTools 4.60.2 in a temporary authoring environment. No font dependency is needed at runtime. Original fonts and license files are retained; CSS and preload links request WOFF2. Combined font transfer falls from 323,244 to 117,164 bytes (63.8% smaller), preserving the full glyph set.
 
-## Catalog — November 3, 2026
+## Initial catalog release — November 3, 2026
 
 The 12 SVGs under `public/assets/catalog/` are original vector illustrations created for SolidSite Signs: one overview and 11 category drawings. They show product formats, not completed client projects or exact supplier configurations. No supplier photographs, logos or catalog copy were reused. B2Sign's site terms do not grant a general redistribution license; its white-label navigation alone was not treated as permission.
 
 `public/downloads/solidsite-signs-catalog.pdf` uses original ReportLab vector drawings, the existing licensed Barlow fonts, and the existing generated storefront concept above, labeled as illustrative. The source generator is `scripts/build-catalog-pdf.py`. Product facts are paraphrased from the internal source notes and shared catalog data; private source URLs and supplier identities are excluded from the public PDF and website.
+
+## Supplier product photographs — November 3, 2026
+
+Erik requested the suppliers’ images for the customer website and downloadable catalog, superseding the earlier illustrative-mockup choice. Each of the 104 entries has a WebP in `public/assets/products/`: 95 use B2Sign examples and nine use Signs365 examples from its signed-in catalog. This records source and user direction, not a separate license verification. The initial-release note above remains dated evidence.
+
+[Image provenance](catalog-image-sources.json) records the observed supplier page and image URL, product match, input/output dimensions, byte count and SHA-256. The server does not serve this file. Only orientation, proportional size reduction and encoding were applied. Artwork, branding and watermarks are intact. The images are examples, not SolidSite customer jobs. The three printed handouts share the supplier’s family photograph, labeled “Cards and mailers shown together”; the five service entries say “Related product example.”
+
+The 32-page PDF uses the same complete product selection and proportionally resized JPEGs for efficient embedding. The storefront concept on the cover is still explicitly labeled. A release build fails if a product image is missing or if item text overflows. The original category SVGs remain available for the original design.

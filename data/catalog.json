@@ -15,7 +15,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/2",
             "https://www.b2sign.com/13oz-vinyl-banner"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "blockout-banners",
@@ -25,7 +26,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/vinyl-banner-18oz-blockout"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "mesh-banners",
@@ -36,7 +38,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/2",
             "https://www.b2sign.com/mesh-banners"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "smooth-banners",
@@ -47,7 +50,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/2",
             "https://www.b2sign.com/super-smooth-indoor-banner"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "fabric-banners",
@@ -57,7 +61,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/fabric-banner-9oz-wrinkle-free"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "blockout-fabric",
@@ -67,7 +72,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/fabric-block-out"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tension-fabric-graphics",
@@ -77,7 +83,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/tension-fabric"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "backlit-banners",
@@ -87,7 +94,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/vinyl-banner-backlit"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "pole-banners",
@@ -97,7 +105,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/pole-banner-set"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "hand-banners",
@@ -107,7 +116,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/hand-banner"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -125,7 +135,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/coroplast"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "acrylic-signs",
@@ -136,7 +147,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/rigid-signs-and-magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "foam-board",
@@ -147,7 +159,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/foamcore"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "gatorfoam",
@@ -157,7 +170,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/rigid-signs-and-magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "pvc-signs",
@@ -168,7 +182,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/rigid-signs-and-magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "styrene-signs",
@@ -179,7 +194,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/styrene"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "aluminum-signs",
@@ -190,7 +206,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/rigid-signs-and-magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "composite-signs",
@@ -201,7 +218,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/rigid-signs-and-magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "bubble-core-signs",
@@ -211,7 +229,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/1"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "magnetic-signs",
@@ -222,7 +241,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/4",
             "https://www.b2sign.com/magnets"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "property-posts",
@@ -232,7 +252,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/real-estate"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "property-frames",
@@ -242,7 +263,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/real-estate"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -260,7 +282,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/adhesive-vinyl"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "performance-vinyl",
@@ -270,7 +293,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "wrap-graphics",
@@ -281,7 +305,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "window-perf",
@@ -292,7 +317,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "window-cling",
@@ -303,7 +329,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/premium-window-cling"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "clear-vinyl",
@@ -313,7 +340,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "frosted-vinyl",
@@ -323,7 +351,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "double-window",
@@ -333,7 +362,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/3"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "translucent-vinyl",
@@ -344,7 +374,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/adhesive-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "indoor-floor",
@@ -355,7 +386,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/floor-graphics"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "outdoor-floor",
@@ -365,7 +397,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/3"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -383,7 +416,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/2",
             "https://www.b2sign.com/banner-stands"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tabletop-retractable",
@@ -393,7 +427,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/banner-stands"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "x-banner",
@@ -403,7 +438,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/banner-stands"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tension-stands",
@@ -413,7 +449,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/banner-stands"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "step-repeat",
@@ -423,7 +460,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/step-repeat-backdrop"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "fabric-backwalls",
@@ -433,7 +471,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/trade-show-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "popup-displays",
@@ -443,7 +482,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/trade-show-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "booth-kits",
@@ -453,7 +493,8 @@
           "service": "Multiple services",
           "sources": [
             "https://www.b2sign.com/trade-show-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "podiums",
@@ -463,7 +504,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/trade-show-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "seg-displays",
@@ -473,7 +515,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/seg-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "backlit-seg",
@@ -483,7 +526,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/10ft-seg-backlit-fabric-display"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "popup-seg",
@@ -493,7 +537,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/seg-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "sidewalk-boards",
@@ -503,7 +548,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/signicade-a-frame"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "metal-aframes",
@@ -513,7 +559,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/a-frame-and-sign-holders"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "banner-aframes",
@@ -523,7 +570,8 @@
           "service": "Banners",
           "sources": [
             "https://www.b2sign.com/banner-a-frame"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "poster-stands",
@@ -533,7 +581,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/poster-stand"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "small-aframes",
@@ -543,7 +592,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/real-estate"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -560,7 +610,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/advertising-flags"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "teardrop-flags",
@@ -570,7 +621,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/teardrop-flag"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "rectangle-flags",
@@ -580,7 +632,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/advertising-flags"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "pole-flags",
@@ -590,7 +643,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/advertising-flags"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "desktop-flags",
@@ -600,7 +654,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/advertising-flags"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "stock-flags",
@@ -610,7 +665,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/advertising-flags"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "event-tents",
@@ -620,7 +676,8 @@
           "service": "Multiple services",
           "sources": [
             "https://www.b2sign.com/custom-event-tents"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tent-walls",
@@ -630,7 +687,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/custom-event-tents"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tent-flags",
@@ -640,7 +698,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/custom-event-tents"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "table-throws",
@@ -650,7 +709,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/table-throw"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "fitted-tables",
@@ -660,7 +720,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/table-throw"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "stretch-tables",
@@ -670,7 +731,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/table-throw"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "round-tables",
@@ -680,7 +742,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/table-throw"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "table-runners",
@@ -690,7 +753,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/table-throw"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "solid-tables",
@@ -700,7 +764,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/solid-color-table-throws-assorted-colors"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -717,7 +782,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/2"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "durable-posters",
@@ -727,7 +793,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/2"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "display-inserts",
@@ -738,7 +805,8 @@
           "sources": [
             "https://www.b2sign.com/posters",
             "https://www.b2sign.com/popup"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "canvas-roll",
@@ -749,7 +817,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/2",
             "https://www.b2sign.com/canvas-roll"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "canvas-wraps",
@@ -759,7 +828,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/wall-art"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "framed-canvas",
@@ -769,7 +839,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/wall-art"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "framed-prints",
@@ -779,7 +850,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/wall-art"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "wall-fabric",
@@ -790,7 +862,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/wall-graphics"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "wallpaper",
@@ -800,7 +873,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/non_woven_wallpapper"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "wall-seg",
@@ -810,7 +884,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/wall_mount_seg"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -827,7 +902,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/999"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "dtf-transfers",
@@ -838,7 +914,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/999",
             "https://www.b2sign.com/direct-to-film"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "uv-dtf",
@@ -848,7 +925,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/uv-dtf"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -865,7 +943,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/11"
-          ]
+          ],
+          "imageLabel": "Cards and mailers shown together"
         },
         {
           "id": "postcards",
@@ -875,7 +954,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/11"
-          ]
+          ],
+          "imageLabel": "Cards and mailers shown together"
         },
         {
           "id": "mailers",
@@ -885,7 +965,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/11"
-          ]
+          ],
+          "imageLabel": "Cards and mailers shown together"
         },
         {
           "id": "metal-cards",
@@ -895,7 +976,8 @@
           "service": "Graphics",
           "sources": [
             "https://signs365.com/portal/#catalog/11"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -912,7 +994,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/standard-channel-letter"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "halo-letters",
@@ -923,7 +1006,8 @@
           "sources": [
             "https://www.b2sign.com/reverse-lit",
             "https://www.b2sign.com/channel-letter"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "premium-letters",
@@ -933,7 +1017,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/channel-letter"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "cut-metal",
@@ -943,7 +1028,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/metal-sign"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "backlit-inserts",
@@ -954,7 +1040,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/1",
             "https://www.b2sign.com/backlit-film"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "reflective-finishes",
@@ -965,7 +1052,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/reflective-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "dry-erase",
@@ -976,7 +1064,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/3",
             "https://www.b2sign.com/dry-erase-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -994,7 +1083,8 @@
           "sources": [
             "https://www.b2sign.com/custom-seg-fabric",
             "https://www.b2sign.com/hardware-only"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "display-hardware",
@@ -1004,7 +1094,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/hardware-only"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "flag-hardware",
@@ -1014,7 +1105,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/hardware-only"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "tent-hardware",
@@ -1024,7 +1116,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/hardware-only"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "sign-stakes",
@@ -1035,7 +1128,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/6",
             "https://www.b2sign.com/real-estate"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "standoffs",
@@ -1046,7 +1140,8 @@
           "sources": [
             "https://signs365.com/portal/#catalog/6",
             "https://www.b2sign.com/material"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "poster-hangers",
@@ -1057,7 +1152,8 @@
           "sources": [
             "https://www.b2sign.com/snap-poster-hanger-hardware",
             "https://www.b2sign.com/wall-art"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "display-lights",
@@ -1067,7 +1163,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/trade-show-products"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "blank-media",
@@ -1077,7 +1174,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/material"
-          ]
+          ],
+          "imageLabel": "Product example"
         },
         {
           "id": "finishing-supplies",
@@ -1087,7 +1185,8 @@
           "service": "Graphics",
           "sources": [
             "https://www.b2sign.com/material"
-          ]
+          ],
+          "imageLabel": "Product example"
         }
       ]
     },
@@ -1104,7 +1203,8 @@
           "service": "Multiple services",
           "sources": [
             "user:signage-sales-project-management"
-          ]
+          ],
+          "imageLabel": "Related product example"
         },
         {
           "id": "artwork-review",
@@ -1114,7 +1214,8 @@
           "service": "Multiple services",
           "sources": [
             "user:signage-sales-project-management"
-          ]
+          ],
+          "imageLabel": "Related product example"
         },
         {
           "id": "installation-service",
@@ -1124,7 +1225,8 @@
           "service": "Installation",
           "sources": [
             "user:self-install-suitable-signage"
-          ]
+          ],
+          "imageLabel": "Related product example"
         },
         {
           "id": "local-delivery",
@@ -1134,7 +1236,8 @@
           "service": "Multiple services",
           "sources": [
             "user:self-deliver-signage"
-          ]
+          ],
+          "imageLabel": "Related product example"
         },
         {
           "id": "repeat-campaigns",
@@ -1144,7 +1247,8 @@
           "service": "Multiple services",
           "sources": [
             "user:local-dealership-signage-history"
-          ]
+          ],
+          "imageLabel": "Related product example"
         }
       ]
     }

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Build the customer PDF from the same internal catalog source as the website."""
-import json, math
+import io, json
+from PIL import Image
 from pathlib import Path
 from xml.sax.saxutils import escape
 from reportlab.pdfgen import canvas
-from reportlab.lib.colors import HexColor, Color
+from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 from reportlab.pdfbase import pdfmetrics
@@ -29,10 +30,19 @@ styles={
  'name':ParagraphStyle('name',fontName='BarlowBold',fontSize=13,leading=15,textColor=INK),
  'intro':ParagraphStyle('intro',fontName='Barlow',fontSize=12,leading=16,textColor=MUTED),
  'title':ParagraphStyle('title',fontName='Display',fontSize=40,leading=39,textColor=INK),
+ 'category':ParagraphStyle('category',fontName='Display',fontSize=32,leading=31,textColor=INK),
 }
 
 def p(text,x,top,width,style='body'):
     obj=Paragraph(escape(text).replace('\n','<br/>'),styles[style]); _,height=obj.wrap(width,1000);obj.drawOn(c,x,top-height); return height
+
+def pdf_image(path, size=750):
+    # JPEG embeds efficiently in PDF; preserve the full supplier image and ratio.
+    with Image.open(path) as source:
+        image=source.convert('RGB');image.thumbnail((size,size),Image.Resampling.LANCZOS)
+        buffer=io.BytesIO();image.save(buffer,'JPEG',quality=88,optimize=True)
+    buffer.seek(0)
+    return ImageReader(buffer)
 
 def header(label='Product & service catalog'):
     c.setFillColor(PAPER); c.rect(0,0,W,H,fill=1,stroke=0)
@@ -48,73 +58,17 @@ def footer(page):
     c.linkURL('https://solidsitesigns.com/catalog/',(M,23,M+205,43),relative=0)
     c.drawRightString(W-M,31,f'{page:02d}')
 
-def illustration(kind,x,y,w,h):
-    """Original vector format sketches, not supplier imagery or completed jobs."""
-    c.saveState();c.translate(x,y);c.scale(w/280,h/160)
-    c.setFillColor(IVORY);c.roundRect(0,0,280,160,6,fill=1,stroke=0)
-    c.setStrokeColor(INK);c.setLineWidth(2)
-    if kind=='banners':
-        c.setFillColor(RED);c.rect(28,32,224,96,fill=1,stroke=0)
-        c.setFillColor(WHITE);c.setFont('Display',36);c.drawCentredString(140,83,'MAKE AN');c.drawCentredString(140,46,'ENTRANCE.')
-        for xx in [35,245]:
-            for yy in [39,121]:c.circle(xx,yy,2.5,fill=1,stroke=0)
-    elif kind in ['rigid-signs','specialty-signs']:
-        c.setFillColor(WHITE);c.rect(43,55,194,76,fill=1,stroke=1)
-        c.setFillColor(INK);c.setFont('Display',26);c.drawCentredString(140,92,'YOUR BUSINESS')
-        c.setFillColor(RED);c.rect(61,73,158,6,fill=1,stroke=0)
-        if kind=='rigid-signs':c.line(80,55,80,16);c.line(200,55,200,16)
-        else:
-            for xx in [51,229]:
-                for yy in [63,123]:c.circle(xx,yy,2,fill=0,stroke=1)
-    elif kind in ['adhesive-graphics','wall-art']:
-        c.setFillColor(WHITE);c.rect(35,21,210,118,fill=1,stroke=1);c.line(140,21,140,139)
-        c.setFillColor(RED);c.rect(47,67,186,44,fill=1,stroke=0)
-        c.setFillColor(WHITE);c.setFont('Display',28);c.drawCentredString(140,78,'WELCOME IN')
-        if kind=='wall-art':
-            c.setFillColor(INK);c.rect(61,32,73,18,fill=1,stroke=0)
-    elif kind=='displays':
-        for xx in [42,157]:
-            c.setFillColor(INK);c.roundRect(xx,15,80,8,2,fill=1,stroke=0)
-            c.setFillColor(WHITE);c.rect(xx+5,23,70,116,fill=1,stroke=1)
-            c.setFillColor(RED);c.rect(xx+5,83,70,56,fill=1,stroke=0)
-            c.setFillColor(INK);c.setFont('Display',23);c.drawCentredString(xx+40,57,'BE SEEN')
-    elif kind=='events':
-        path=c.beginPath();path.moveTo(25,106);path.lineTo(140,147);path.lineTo(255,106);path.close()
-        c.setFillColor(RED);c.drawPath(path,fill=1,stroke=0);c.setFillColor(INK)
-        c.line(36,106,36,18);c.line(244,106,244,18)
-        c.setFillColor(WHITE);c.rect(64,25,152,42,fill=1,stroke=1)
-        c.setFillColor(RED);c.setFont('Display',23);c.drawCentredString(140,39,'YOUR BRAND')
-    elif kind=='apparel-transfers':
-        path=c.beginPath()
-        for i,(xx,yy) in enumerate([(94,132),(117,143),(163,143),(186,132),(218,105),(190,80),(178,90),(178,20),(102,20),(102,90),(90,80),(62,105)]):
-            (path.moveTo if i==0 else path.lineTo)(xx,yy)
-        path.close();c.setFillColor(WHITE);c.drawPath(path,fill=1,stroke=1)
-        c.setFillColor(RED);c.rect(116,74,48,29,fill=1,stroke=0)
-        c.setFillColor(WHITE);c.setFont('Display',17);c.drawCentredString(140,82,'CREW')
-    elif kind=='print':
-        c.setFillColor(INK);c.rect(42,62,161,80,fill=1,stroke=0)
-        c.setFillColor(WHITE);c.rect(76,24,162,83,fill=1,stroke=1)
-        c.setFillColor(RED);c.setFont('Display',26);c.drawString(91,67,'GOOD TO MEET YOU')
-        c.setStrokeColor(LINE);c.line(91,48,204,48)
-    else:
-        c.setFillColor(WHITE);c.roundRect(73,19,134,124,3,fill=1,stroke=1)
-        c.setFillColor(RED);c.rect(112,134,56,13,fill=1,stroke=0)
-        for yy in [108,78,48]:
-            c.setStrokeColor(RED);c.line(91,yy,97,yy-6);c.line(97,yy-6,108,yy+7)
-            c.setStrokeColor(INK);c.line(121,yy,188,yy)
-    c.restoreState()
-
-# A maximum of ten entries per sheet keeps the two-column list readable.
+# Four image-led entries per sheet make each product example legible.
 spreads=[]
 for cat in DATA['categories']:
-    for start in range(0,len(cat['items']),10): spreads.append((cat,cat['items'][start:start+10],start>0))
+    for start in range(0,len(cat['items']),4): spreads.append((cat,cat['items'][start:start+4],start>0))
 starts={}
 for page,(cat,_,_) in enumerate(spreads,2):starts.setdefault(cat['id'],page)
 header('2026 collection')
 p('Signs, graphics\nand everything\naround them.',M,682,CW,'title')
 p('A product and service guide for your business, storefront, dealership or next event. Work directly with Erik from the brief through the agreed delivery or installation.',M,548,CW,'intro')
 # Original illustrative image already used on SolidSite's website.
-c.drawImage(ImageReader(str(ROOT/'public/assets/storefront.webp')),M,290,width=CW,height=200,mask='auto',preserveAspectRatio=True,anchor='c')
+c.drawImage(pdf_image(ROOT/'public/assets/storefront.webp',1200),M,290,width=CW,height=200,preserveAspectRatio=True,anchor='c')
 p('Illustrative signage concept. Not a completed client project.',M,282,CW,'small')
 for idx,cat in enumerate(DATA['categories']):
     col=idx//6;row=idx%6;xx=M+col*(CW/2+12);yy=244-row*29
@@ -128,22 +82,26 @@ for page,(cat,items,continued) in enumerate(spreads,2):
     header();
     if not continued:c.bookmarkPage(cat['id']);c.addOutlineEntry(cat['title'],cat['id'],0,False)
     title=cat['title']+(' / continued' if continued else '')
-    title_height=p(title,M,688,350,'title')
-    intro_top=688-title_height-15
-    p(cat['intro'],M,intro_top,342,'intro')
-    illustration(cat['id'],414,578,156,90)
-    c.setFillColor(MUTED);c.setFont('Barlow',7);c.drawRightString(W-M,568,'Format illustration')
-    top=534;col_width=(CW-28)/2;rows=math.ceil(len(items)/2);row_height=min(105,450/max(rows,1))
+    title_height=p(title,M,704,CW,'category')
+    intro_top=704-title_height-10
+    p(cat['intro'],M,intro_top,CW,'body')
+    top=584;col_width=(CW-28)/2;row_height=250
     for index,item in enumerate(items):
         col=index%2;row=index//2;xx=M+col*(col_width+28);yy=top-row*row_height
-        c.setStrokeColor(LINE);c.line(xx,yy+8,xx+col_width,yy+8)
-        n=p(item['name'],xx,yy,col_width,'name')
-        d=p(item['description'],xx,yy-n-6,col_width,'body')
-        o=p(item['options'],xx,yy-n-d-12,col_width,'small') if item.get('options') else 0
-        used=n+d+o+12
+        image_path=ROOT/'public/assets/products'/f'{item["id"]}.webp'
+        if not image_path.is_file():raise ValueError(f'Missing product picture: {image_path}')
+        c.setFillColor(IVORY);c.rect(xx,yy-145,col_width,145,fill=1,stroke=0)
+        c.drawImage(pdf_image(image_path),xx,yy-145,width=col_width,height=145,preserveAspectRatio=True,anchor='c')
+        label=item.get('imageLabel','Product example')
+        c.setFillColor(MUTED);c.setFont('Barlow',7);c.drawString(xx,yy-154,label)
+        text_top=yy-168
+        n=p(item['name'],xx,text_top,col_width,'name')
+        d=p(item['description'],xx,text_top-n-5,col_width,'body')
+        o=p(item['options'],xx,text_top-n-d-10,col_width,'small') if item.get('options') else 0
+        used=168+n+d+o+10
         if used>row_height-10:raise ValueError(f"Catalog row overflow: {item['name']} uses {used:.1f} of {row_height:.1f}")
-        c.linkURL('https://solidsitesigns.com/?service='+__import__('urllib.parse',fromlist=['quote']).quote(item['service'])+'&product='+__import__('urllib.parse',fromlist=['quote']).quote(item['name'])+'#quote',(xx,yy-n,xx+col_width,yy+4),relative=0)
-    p('Request a quote at solidsitesigns.com or call (713) 912-2151.',M,70,CW,'small')
+        c.linkURL('https://solidsitesigns.com/?service='+__import__('urllib.parse',fromlist=['quote']).quote(item['service'])+'&product='+__import__('urllib.parse',fromlist=['quote']).quote(item['name'])+'#quote',(xx,text_top-n,xx+col_width,yy),relative=0)
+    p('Product examples. Artwork, size, finish and included hardware are confirmed with your quote.',M,70,CW,'small')
     footer(page);c.showPage()
 
 page=len(spreads)+2;header('Let\'s talk signs')

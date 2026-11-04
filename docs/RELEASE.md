@@ -82,3 +82,33 @@ Validation: all 23 automated tests, syntax checks and whitespace checks passed. 
 Publication target is the existing [SolidSite Signs catalog](https://solidsitesigns.com/catalog/) on Railway. Final commit/deployment and live verification are recorded in the existing `SS-SIGNS-WEB-20261102` task after deployment. Ongoing intake remains `WEB-LEADS-20261102`; Search Console and authorized real-project photography remain separate follow-through.
 
 Live verification of initial catalog commit `17abd82` caught an older `app.js` retained in the returning browser session: service preselection worked, but the new product brief did not appear. The server now appends a content-derived version to script/style URLs on all rendered pages, including fallback form responses. A regression check verifies that each URL version matches the bytes served, and the suite now has 24 checks. This correction avoids requiring visitors to clear their cache.
+
+## Product photography — November 3, 2026 (awaiting supplier login)
+
+Erik requested pictures for every product and then instructed use of the suppliers’ images. This supersedes the earlier illustrative-mockup choice. Atlas imported 95 matching B2Sign product images, preserved source provenance, and checked all four image contact sheets. The five service entries use labeled related product examples. Nine Signs365-only images still require Erik to sign in through the scoped Chrome supplier tab; no unrelated browser-window contents are required.
+
+The staged site adds lazy-loaded product pictures, an enlarged native-dialog view, keyboard dismissal/focus return and ordinary image links when JavaScript/dialog support is unavailable. Search, filters and product quote links are preserved. The PDF generator now provides four photo-led listings per page across 32 pages, with overflow and missing-image guards and compressed embedded images. PDF download URLs now include a content hash to avoid stale downloads after release.
+
+Validation so far: 28/29 automated tests pass. The single failure lists exactly the nine missing photo files; all 95 imported files are served as valid WebP images, and private catalog/image-source records remain inaccessible. Syntax checks pass. Browser checks confirmed desktop and 390/320-pixel image viewing, Escape/focus return, filtering and no horizontal overflow. A local-only PDF preview has 32 pages, all 104 names, 95 supplier images plus the existing illustrative cover, and nine explicitly pending-image spaces; both rendered contact sheets were reviewed without overlap. This preview is not the public download. Independent read-only review found no actionable defects and independently measured zero PDF row/header collisions (maximum row 234 points, limit 240).
+
+Missing: bubble-core-signs, double-window, outdoor-floor, durable-posters, printed-shirts, business-cards, postcards, mailers, metal-cards. Next: after scoped Signs365 login, collect those exact supplier images, rerun the complete integrity check, rebuild and inspect the final PDF, then use the existing authorized main-push/Railway deployment flow and verify production. No photo update is committed or published yet. Existing live release remains `e1336df`, deployment `615e1b5f-f755-4ae8-951d-cfc23bbea343`.
+
+### Outcome report
+
+1. Company/task: SolidSite / SS-SIGNS-WEB-20261102; Atlas owns the photo expansion.
+2. Status: 95 photos and the site/PDF layout staged; nine supplier photos await Signs365 login.
+3. Evidence: [image provenance](catalog-image-sources.json), 28 passing tests and one expected missing-assets failure; desktop/phone and PDF visual review.
+4. Next: Erik signs into the scoped Signs365 tab; Atlas completes the remaining images, final checks and existing authorized deployment. No new deadline or schedule.
+5. Authority: existing catalog/site/push scope and Erik’s explicit supplier-image instruction; no supplier order, outreach, purchase or account change.
+
+
+Supplier-session follow-up: Erik confirmed he is signed in and clarified the tab is in Chrome profile **TSG**. The browser connection exposes only **Erik**; its scoped Signs365 tabs remain logged out. A direct known catalog route also showed the login form. Automatic approval review rejected native Chrome-window capture because it could expose unrelated private tabs. Atlas requested connection of the TSG profile through the Codex browser extension or a scoped tab attachment. This access dependency supersedes the earlier request simply to sign in. The 95 staged images and remaining-nine list are unchanged; no push occurred. Erik explicitly reiterated “finish the remaining pictures and push it.”
+
+
+## Complete supplier photo catalog — November 3, 2026
+
+The TSG browser connection exposed the signed-in Signs365 catalog on refresh. All nine pending entries now have matching supplier images from the rigid, adhesive, banner, apparel and handheld categories. Each of the 104 product/service listings links to an enlarged self-hosted image. Signs365 shows paper business cards, postcards and mailers in one product-family photograph; those entries are labeled accordingly. All five service cards retain related-product captions.
+
+The customer PDF has been rebuilt with the final images. All 29 automated checks pass, including all 104 WebP routes, private source isolation, PDF download content version, quote flow and persistent storage. Syntax and whitespace checks pass. Earlier staged and login-blocked statuses are superseded. The existing website task records the final deployed commit and production readback.
+
+Final PDF QA: all 32 rendered pages reviewed. All 104 product image placements match their intended source conversions, all 104 quote links encode the expected product/service, and all 11 contents links/bookmarks reach the correct category. The PDF is 7,529,032 bytes; SHA-256 `81f4b180b3356c0fe5ec40719ec1e7fe1cfc2c510c7856e3ca2f22c7b656921c`.

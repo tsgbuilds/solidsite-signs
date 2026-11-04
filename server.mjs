@@ -11,10 +11,10 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
 // A changed asset gets a new URL even when a browser or CDN retains an old copy.
 const assetVersions = Object.fromEntries(await Promise.all(
-  ['app.js', 'styles.css', 'catalog.js', 'catalog.css'].map(async name => [name,
+  ['app.js', 'styles.css', 'catalog.js', 'catalog.css', 'downloads/solidsite-signs-catalog.pdf'].map(async name => [name,
     createHash('sha256').update(await readFile(resolve(PUBLIC, name))).digest('hex').slice(0, 16)])
 ));
-const versionAssets = html => html.replace(/(src|href)="\/(app\.js|styles\.css|catalog\.js|catalog\.css)"/g,
+const versionAssets = html => html.replace(/(src|href)="\/(app\.js|styles\.css|catalog\.js|catalog\.css|downloads\/solidsite-signs-catalog\.pdf)"/g,
   (_, attribute, name) => `${attribute}="/${name}?v=${assetVersions[name]}"`);
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.pdf': 'application/pdf' };
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);

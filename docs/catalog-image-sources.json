@@ -1,0 +1,2087 @@
+{
+  "updated": "2026-11-03",
+  "direction": "Erik requested use of the suppliers’ images on November 3, 2026, superseding the earlier illustrative-mockup choice.",
+  "processing": "Original product photography preserved; orientation, size reduction and WebP encoding only. No generative edits, watermark removal or content retouching.",
+  "images": [
+    {
+      "id": "vinyl-banners",
+      "name": "Vinyl banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/13oz-vinyl-banner",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240430/HrhLAGOx-s1000.jpg",
+      "sourceAlt": "13oz. Vinyl Banner",
+      "localPath": "public/assets/products/vinyl-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 78992,
+      "sha256": "00e4d4b22a37fb85566da06968e82ec5c0795c861e7b3c58980a6bc23503e0ba"
+    },
+    {
+      "id": "blockout-banners",
+      "name": "Heavyweight blockout banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/vinyl-banner-18oz-blockout",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240430/iQrOVCt4-s1000.jpg",
+      "sourceAlt": "18oz. Blockout Banner",
+      "localPath": "public/assets/products/blockout-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 81688,
+      "sha256": "144530254a84d6a69cb126452cd751d5d2ee4eea603101dad39f2b8d881aa820"
+    },
+    {
+      "id": "mesh-banners",
+      "name": "Mesh banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/mesh-banners",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240430/WvsHtoYW-s1000.jpg",
+      "sourceAlt": "Mesh Banner",
+      "localPath": "public/assets/products/mesh-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 156766,
+      "sha256": "26540135a9c6c2728481fcc92936f6f6e7ddf2837a343c32c1f7d2bf17c37525"
+    },
+    {
+      "id": "smooth-banners",
+      "name": "Smooth indoor banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/super-smooth-indoor-banner",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240430/UAkpyNc7-s1000.jpg",
+      "sourceAlt": "Indoor Banner",
+      "localPath": "public/assets/products/smooth-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 34820,
+      "sha256": "d2bd2aa4435c3c407a602f67cfbcac7b292fe05049844e94a18b1a1af02704dc"
+    },
+    {
+      "id": "fabric-banners",
+      "name": "Fabric banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/fabric-banner-9oz-wrinkle-free",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/s4X77Aea-s1000.jpg",
+      "sourceAlt": "9oz. Fabric Banner",
+      "localPath": "public/assets/products/fabric-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 92068,
+      "sha256": "37c3878130d75c3cbf322e9eefed5e43fc0077f5926b32faaaadd7abcf65fdaf"
+    },
+    {
+      "id": "blockout-fabric",
+      "name": "Blockout fabric banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/fabric-block-out",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/alqOjexb-s1000.jpg",
+      "sourceAlt": "Blockout Fabric Banner",
+      "localPath": "public/assets/products/blockout-fabric.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 69884,
+      "sha256": "530a721b86bce9603440b5f8e9483fef7d80838b6fb4c7fd260c06b2f9697d9b"
+    },
+    {
+      "id": "tension-fabric-graphics",
+      "name": "Tension fabric graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/tension-fabric",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/XWKEnh55-s1000.jpg",
+      "sourceAlt": "Tension Fabric",
+      "localPath": "public/assets/products/tension-fabric-graphics.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 40520,
+      "sha256": "04606c71a546a9133ca366ba67bee7cfd2f9fa303363135ad4a6f54625a902d9"
+    },
+    {
+      "id": "backlit-banners",
+      "name": "Backlit banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/vinyl-banner-backlit",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/qBAEQUbh-s1000.jpg",
+      "sourceAlt": "Backlit Banner",
+      "localPath": "public/assets/products/backlit-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 96814,
+      "sha256": "574303938e0adec744b0efca96b1d8e9cfeb4e1fe2eb4f3e3a1d0a023d5985db"
+    },
+    {
+      "id": "pole-banners",
+      "name": "Pole banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/pole-banner-set",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/snlYm2Bs-s1000.jpg",
+      "sourceAlt": "Pole Banner",
+      "localPath": "public/assets/products/pole-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 100968,
+      "sha256": "737227e4f0dbdd075acc714b8ac85d1980517a13dfb04ed9f8dc1de9795cb2e3"
+    },
+    {
+      "id": "hand-banners",
+      "name": "Hand banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/hand-banner?size=24x9.5",
+      "imageUrl": "https://www.b2sign.com/image/thumb/251114/VZoBb9Qa-s1000.jpg",
+      "sourceAlt": "Hand Banner",
+      "localPath": "public/assets/products/hand-banners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 25158,
+      "sha256": "87de1ca979ad9626a1da5ded5c23b6210f1a4d43b6c34166617b37485d5116fc"
+    },
+    {
+      "id": "yard-signs",
+      "name": "Yard signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/yard-sign-and-h-stake",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/4IAuaE2Q-s1000.jpg",
+      "sourceAlt": "Yard Sign and H-Stake",
+      "localPath": "public/assets/products/yard-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 31892,
+      "sha256": "83675dd29379eecc190200413c995481177c39e858bbc68d88462101faa2e648"
+    },
+    {
+      "id": "acrylic-signs",
+      "name": "Acrylic signs & photo panels",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/acrylic-prints",
+      "imageUrl": "https://www.b2sign.com/image/thumb/260813/pjDInuxl-s1000.jpg",
+      "sourceAlt": "Acrylic",
+      "localPath": "public/assets/products/acrylic-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 69190,
+      "sha256": "9ca32c4942ef8014650df40e44619d45fc90738bb171175e51068ff0a6712b4a"
+    },
+    {
+      "id": "foam-board",
+      "name": "Foam-board signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/foamcore",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/lxjHrirW-s1000.jpg",
+      "sourceAlt": "Foam Board",
+      "localPath": "public/assets/products/foam-board.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 29612,
+      "sha256": "f39f5927f783a5049405996aaba812ad14609cba91e8724c3b59b0380e366aad"
+    },
+    {
+      "id": "gatorfoam",
+      "name": "Gatorfoam signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/gatorfoam?material=3%2F16in_gatorfoam",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/oaKpnDtM-s1000.jpg",
+      "sourceAlt": "GatorFoam",
+      "localPath": "public/assets/products/gatorfoam.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 66968,
+      "sha256": "da5a742817ecaf4e332246eb4d93f7a4400bda4aea0049f66f31aafbd1e56220"
+    },
+    {
+      "id": "pvc-signs",
+      "name": "PVC signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/pvc-board",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/fejvVNrP-s1000.jpg",
+      "sourceAlt": "PVC Board",
+      "localPath": "public/assets/products/pvc-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 15332,
+      "sha256": "05e8155c5cc2d7557a2b4589b863bfd877f74e9913018b4c7f68371d5bca4f19"
+    },
+    {
+      "id": "styrene-signs",
+      "name": "Styrene signs & inserts",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/styrene",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/m5yXhGqy-s1000.jpg",
+      "sourceAlt": "Styrene",
+      "localPath": "public/assets/products/styrene-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 19100,
+      "sha256": "baa54ecf64059be2a8da1727dbb4b4f91b113a8643355b521996931c1fae0956"
+    },
+    {
+      "id": "aluminum-signs",
+      "name": "Aluminum signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/aluminum-sign?size=custom_size",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/rzwi0OFy-s1000.jpg",
+      "sourceAlt": "Aluminum Sign",
+      "localPath": "public/assets/products/aluminum-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 26432,
+      "sha256": "43fd4edc4c4a8b3b6e7232738dc17a7a64fca4b5000c4e2c872f2f59b9fb2038"
+    },
+    {
+      "id": "composite-signs",
+      "name": "Aluminum composite signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/aluminum-sandwich-board",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/5FS89lqV-s1000.jpg",
+      "sourceAlt": "Aluminum Sandwich Board",
+      "localPath": "public/assets/products/composite-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 38656,
+      "sha256": "2bad8ce5d5ff6249c7ccbbcdd930c116655cbdcf66e8dd4e9943bc5713d4f48a"
+    },
+    {
+      "id": "magnetic-signs",
+      "name": "Vehicle & custom magnets",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/magnets",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/Sk2xQQ9j-s1000.jpg",
+      "sourceAlt": "Magnets",
+      "localPath": "public/assets/products/magnetic-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 60150,
+      "sha256": "dcce5326d81b49bd02129dfabf36c31b34f59203229626c128b457de61907c0e"
+    },
+    {
+      "id": "property-posts",
+      "name": "Hanging post signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/real-estate-post",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/z8U0CWfz-s1000.jpg",
+      "sourceAlt": "Real Estate Post",
+      "localPath": "public/assets/products/property-posts.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 19084,
+      "sha256": "ee1c41481d137e79ef6dc685e1482e62c83276144c758d9056d98a61aaddaf78"
+    },
+    {
+      "id": "property-frames",
+      "name": "Steel-frame sign sets",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/real-estate-frame",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/aDYcLFT8-s1000.jpg",
+      "sourceAlt": "Real Estate Frame",
+      "localPath": "public/assets/products/property-frames.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 25654,
+      "sha256": "117376f925c3bad5dbf4e05458e585174443e20612aed14017c55fa989a62c35"
+    },
+    {
+      "id": "adhesive-vinyl",
+      "name": "Printed adhesive vinyl",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/adhesive-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/YhjcHd0f-s1000.jpg",
+      "sourceAlt": "Adhesive Vinyl",
+      "localPath": "public/assets/products/adhesive-vinyl.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 38344,
+      "sha256": "d5ac5f93385a367cdc3301f743e49e84c8d54822047b490b0e9c2200b14a6a5e"
+    },
+    {
+      "id": "performance-vinyl",
+      "name": "High-performance vinyl",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/adhesive-vinyl-high-performance",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240318/6SntBztj-s1000.jpg",
+      "sourceAlt": "High Performance Vinyl",
+      "localPath": "public/assets/products/performance-vinyl.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 72556,
+      "sha256": "d391cabfab100b06d16f681ecf4b102ea2e1f7f1aff4bd93ae4d7ccbcce12213"
+    },
+    {
+      "id": "wrap-graphics",
+      "name": "Vehicle wrap graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/vehicle-wrap-3m-cast",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240318/yb4GSnVL-s1000.jpg",
+      "sourceAlt": "3M IJ-180Cv3 Controltac",
+      "localPath": "public/assets/products/wrap-graphics.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 55316,
+      "sha256": "f833c7253992ca60fc58956ce087aa2239008afd85c881323751850301869a0c"
+    },
+    {
+      "id": "window-perf",
+      "name": "Perforated window graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/adhesive-window-perf",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/3FBhRyeK-s1000.jpg",
+      "sourceAlt": "Adhesive Window Perf",
+      "localPath": "public/assets/products/window-perf.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 289162,
+      "sha256": "57f8774c4cec72f6829e77de50651d36c58f81a2584a7f7a790b507f65e86540"
+    },
+    {
+      "id": "window-cling",
+      "name": "Window clings",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/premium-window-cling",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/xCc017nY-s1000.jpg",
+      "sourceAlt": "Premium Window Cling",
+      "localPath": "public/assets/products/window-cling.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 86114,
+      "sha256": "9f8ce7f6e80ad390cd87133c3d9d26c082fd548b659f06632a597d7228fb3305"
+    },
+    {
+      "id": "clear-vinyl",
+      "name": "Clear window graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/adhesive-clear-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/GnXTGD8p-s1000.jpg",
+      "sourceAlt": "Adhesive Clear Vinyl",
+      "localPath": "public/assets/products/clear-vinyl.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 79918,
+      "sha256": "6d150b5aff9f0667485eb46e0e129c98f39566a3572d4034cb6eceb2c32d6178"
+    },
+    {
+      "id": "frosted-vinyl",
+      "name": "Frosted glass graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/etched-printable-frosted-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/wWHl7KLh-s1000.jpg",
+      "sourceAlt": "Frosted Vinyl",
+      "localPath": "public/assets/products/frosted-vinyl.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 67176,
+      "sha256": "557db5e1640810a962d0ca54a2999889c7e713d6b6ccb25a1d9f4fcabce88a5c"
+    },
+    {
+      "id": "translucent-vinyl",
+      "name": "Translucent sign-face graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/adhesive-translucent-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/KvBSsUnQ-s1000.jpg",
+      "sourceAlt": "Adhesive Translucent Vinyl",
+      "localPath": "public/assets/products/translucent-vinyl.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 21832,
+      "sha256": "afa70f8b4d36007c14dacba3b9022af69370720bcaa347ba68e760aa9e3c23b2"
+    },
+    {
+      "id": "indoor-floor",
+      "name": "Indoor floor graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/floor-graphics",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/XB1wbVke-s1000.jpg",
+      "sourceAlt": "Floor Graphics",
+      "localPath": "public/assets/products/indoor-floor.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 59728,
+      "sha256": "ee7cf6f78f9427ab333e4bdb89c2c758f635651f4c9106856f317fdf2f36dc37"
+    },
+    {
+      "id": "retractable-stands",
+      "name": "Retractable banner stands",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/standard-retractable?size=33x81&hardware=ph",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240327/q6ZwMnsh-s1000.jpg",
+      "sourceAlt": "Standard Retractable",
+      "localPath": "public/assets/products/retractable-stands.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 71286,
+      "sha256": "ac0b210ab8e55a801df0247d4c2b527e5e7b2fb463319332c37565e511d366eb"
+    },
+    {
+      "id": "tabletop-retractable",
+      "name": "Tabletop retractable banners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/table-top-banner-stand",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/6yPYGfuF-s1000.jpg",
+      "sourceAlt": "Table Top Banner Stand",
+      "localPath": "public/assets/products/tabletop-retractable.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 27296,
+      "sha256": "e53f5c073f9e0ac229302386c00ac3dac47d64c3e48e3bed98890e7da1516492"
+    },
+    {
+      "id": "x-banner",
+      "name": "X-banner stands",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/x-stand?size=24x63&hardware=ph",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240327/VTX5FDov-s1000.jpg",
+      "sourceAlt": "X-Stand",
+      "localPath": "public/assets/products/x-banner.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 57586,
+      "sha256": "7953cb65e73f4bf18681c4eadbbb3b6fe9c8517f0ec1fcfd38789944b7428703"
+    },
+    {
+      "id": "tension-stands",
+      "name": "Tension fabric stands",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/tension-fabric-stand?size=36x90&hardware=ph",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/h8FLJG1Y-s1000.jpg",
+      "sourceAlt": "Tension Fabric Stand",
+      "localPath": "public/assets/products/tension-stands.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 36110,
+      "sha256": "1467ed3629566c7af832aeb31f58636bb118829cf1efb7f02fa86d294caca92e"
+    },
+    {
+      "id": "step-repeat",
+      "name": "Step-and-repeat backdrops",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/step-repeat-backdrop?size=120x96",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240404/iYFM7ODc-s1000.jpg",
+      "sourceAlt": "Step and Repeat Backdrop",
+      "localPath": "public/assets/products/step-repeat.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 47456,
+      "sha256": "84d441f124d9c89795629cb4ba3d908e59864b57a11625ee7e6067e59fe93851"
+    },
+    {
+      "id": "fabric-backwalls",
+      "name": "Tension fabric backwalls",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/curve-tension-fabric-display?size=6ft",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/EUSNoLa3-s1000.jpg",
+      "sourceAlt": "Tension Fabric Displays - Curved",
+      "localPath": "public/assets/products/fabric-backwalls.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        494
+      ],
+      "imageSize": [
+        1000,
+        494
+      ],
+      "bytes": 46580,
+      "sha256": "a51e999b1916092f9cfc91918d25abf36544ce654562ef8c5b3708388f1a6ed0"
+    },
+    {
+      "id": "popup-displays",
+      "name": "Popup fabric displays",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/straight-velcro-fabric-pop-up-display?size=8ft",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/vjRK34XO-s1000.jpg",
+      "sourceAlt": "Velcro Fabric Pop Up Display - Straight",
+      "localPath": "public/assets/products/popup-displays.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        494
+      ],
+      "imageSize": [
+        1000,
+        494
+      ],
+      "bytes": 41078,
+      "sha256": "f6f0038595023ad751f9b152ae964d94ec071f6b7c3ea68e0444e77a5666ef52"
+    },
+    {
+      "id": "booth-kits",
+      "name": "Modular trade-show kits",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/10x10-custom-booth",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/LKUYTuA8-s1000.jpg",
+      "sourceAlt": "10' x 10' Booths",
+      "localPath": "public/assets/products/booth-kits.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        575
+      ],
+      "imageSize": [
+        1000,
+        575
+      ],
+      "bytes": 28276,
+      "sha256": "dd431b5e0bc3170d63befa2cf908105ef2d01d5a3cee063e5a21016b1470b64f"
+    },
+    {
+      "id": "podiums",
+      "name": "Branded podiums",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/podium",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/3FC1SZru-s1000.jpg",
+      "sourceAlt": "Podium",
+      "localPath": "public/assets/products/podiums.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        575
+      ],
+      "imageSize": [
+        1000,
+        575
+      ],
+      "bytes": 10350,
+      "sha256": "bbbd8455ad109e7dabb1e5da93898670e192c5c664e3af11a2fb7f19e94ab78a"
+    },
+    {
+      "id": "seg-displays",
+      "name": "SEG fabric displays",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/10ft-seg-fabric-display",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/8MQlJCEz-s1000.jpg",
+      "sourceAlt": "10ft SEG Display",
+      "localPath": "public/assets/products/seg-displays.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 51174,
+      "sha256": "38b5e0de8154137ac923e2b1cee44c6e0f31e7ba2eb73c51a3b70f51d88c76ff"
+    },
+    {
+      "id": "backlit-seg",
+      "name": "Backlit SEG displays",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/10ft-seg-backlit-fabric-display",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/NryE2nRm-s1000.jpg",
+      "sourceAlt": "10ft SEG Backlit Display",
+      "localPath": "public/assets/products/backlit-seg.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 140926,
+      "sha256": "ee9a8644dc4976e0aba197a10e87876257232cf6e1ecd76d141c9a120c3ab97e"
+    },
+    {
+      "id": "popup-seg",
+      "name": "Backlit SEG popup displays",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/8ft-seg-backlit-popup-display",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/KOT397KY-s1000.jpg",
+      "sourceAlt": "8ft SEG Backlit Popup Display",
+      "localPath": "public/assets/products/popup-seg.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 99888,
+      "sha256": "1ca180d355eb54c0b8da54c8cc7233b85f286a4547c32b7ca2b272f07e0a0d77"
+    },
+    {
+      "id": "sidewalk-boards",
+      "name": "Plastic sidewalk signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/deluxe-signicade-a-frame",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240312/nDdDE6S9-s1000.jpg",
+      "sourceAlt": "Deluxe Signicade",
+      "localPath": "public/assets/products/sidewalk-boards.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 69528,
+      "sha256": "76869c2a0e7e1583552e5ed18a819e16abcf549d3bcb98743cd7dc7daa7e17d0"
+    },
+    {
+      "id": "metal-aframes",
+      "name": "Metal sidewalk A-frames",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/metal-sidewalk-signs",
+      "imageUrl": "https://www.b2sign.com/image/thumb/261020/QLo09Nz7-s1000.jpg",
+      "sourceAlt": "Metal A-Frame Sidewalk Signs",
+      "localPath": "public/assets/products/metal-aframes.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 68968,
+      "sha256": "aa76017089e92771b6be22289c9d9e3e1ca552ebe928f006d63bd949e597290f"
+    },
+    {
+      "id": "banner-aframes",
+      "name": "Banner A-frames",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/banner-a-frame?size=4ft",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240315/cjJSaxBN-s1000.jpg",
+      "sourceAlt": "Banner A-Frame",
+      "localPath": "public/assets/products/banner-aframes.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 90318,
+      "sha256": "7165a8928af6476af19fa9b244b36a4a25c8841c6a40a7aaf965b530914f9592"
+    },
+    {
+      "id": "poster-stands",
+      "name": "Indoor poster stands",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/poster-stand",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/IVvkFxPs-s1000.jpg",
+      "sourceAlt": "Poster Stand",
+      "localPath": "public/assets/products/poster-stands.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 33560,
+      "sha256": "237cad1ed6dc40a700aa4eafdd377e0759ae980054d71b79ca49cd03a0a3c43f"
+    },
+    {
+      "id": "small-aframes",
+      "name": "Small directional A-frames",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/real-estate-a-frame",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/O8gZZ9tK-s1000.jpg",
+      "sourceAlt": "Real Estate A-Frame",
+      "localPath": "public/assets/products/small-aframes.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 37698,
+      "sha256": "aa16721afa61d031ec666035521bb192ed978a4f935cdf78be4f0272b5fc411a"
+    },
+    {
+      "id": "feather-flags",
+      "name": "Feather flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/feather-angled-flag?size=large",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240314/K0PPnkrc-s1000.jpg",
+      "sourceAlt": "Feather Angled Flag",
+      "localPath": "public/assets/products/feather-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 35394,
+      "sha256": "911c2008c4e5a37314385570fae9d4d619b1dfd0243176285082a56f5dcf446f"
+    },
+    {
+      "id": "teardrop-flags",
+      "name": "Teardrop flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/teardrop-flag?size=large",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240314/RQbJ9x4t-s1000.jpg",
+      "sourceAlt": "Teardrop Flag",
+      "localPath": "public/assets/products/teardrop-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 24882,
+      "sha256": "d6db106d3ca658df7bdd265ae8b5f728980fd34364ca6c19a5474e33f491e853"
+    },
+    {
+      "id": "rectangle-flags",
+      "name": "Rectangle flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/rectangle-flag?size=large",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240314/As0YjrvS-s1000.jpg",
+      "sourceAlt": "Rectangle Flag",
+      "localPath": "public/assets/products/rectangle-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 44436,
+      "sha256": "0a9eeb133a4abedb2502a3a25233550e4890aea4426964dc94ccb1f305ea002e"
+    },
+    {
+      "id": "pole-flags",
+      "name": "Custom pole flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/custom-pole-flag?_size=60x36",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/oTaro2Jm-s1000.jpg",
+      "sourceAlt": "Custom Pole Flag",
+      "localPath": "public/assets/products/pole-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 33506,
+      "sha256": "0738f8f6af5fe1aacae2f3f0268a4fbd774d91ab81919515eb841b5359697d32"
+    },
+    {
+      "id": "desktop-flags",
+      "name": "Desktop flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/desktop-teardrop-flag",
+      "imageUrl": "https://www.b2sign.com/image/thumb/260513/tNffOZsg-s1000.jpg",
+      "sourceAlt": "Desktop Teardrop Flag",
+      "localPath": "public/assets/products/desktop-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 23968,
+      "sha256": "b9f060c0f2c0eaf51b1206596c54e56d68695ede399086a7d2aafc27fc7c66bc"
+    },
+    {
+      "id": "stock-flags",
+      "name": "Stock-message promotional flags",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/econo-stock-flag",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/SsCFiPzG-s1000.jpg",
+      "sourceAlt": "Econo Stock Flag",
+      "localPath": "public/assets/products/stock-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 31524,
+      "sha256": "8a34a51f386684a70e359a7d47adf86a7ffeebeeae6576ba1828ba839f2f84ed"
+    },
+    {
+      "id": "event-tents",
+      "name": "Printed event tents",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/event-tent-canopy-graphic",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250703/w1guOGMT-s1000.jpg",
+      "sourceAlt": "10ft Event Tent",
+      "localPath": "public/assets/products/event-tents.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 54422,
+      "sha256": "ac1d45bc3890165d46d0031f4619993823b6c37852af8de327e926655866dd6a"
+    },
+    {
+      "id": "tent-walls",
+      "name": "Tent walls & half walls",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/tent-wall-full-color?tent_wall=2",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250703/yo9rPIXI-s1000.jpg",
+      "sourceAlt": "10ft Tent Full Wall",
+      "localPath": "public/assets/products/tent-walls.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 31748,
+      "sha256": "1603b876b0557aa0906d8a75392a1aa9a8363b4b54400487632a5b62122fb044"
+    },
+    {
+      "id": "tent-flags",
+      "name": "Tent flag kits",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/tent-flag-teardrop",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250703/QkAOZpw3-s1000.jpg",
+      "sourceAlt": "Tent Flag Kit",
+      "localPath": "public/assets/products/tent-flags.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 27372,
+      "sha256": "83f34f865e1b0fb28af1b87597fd04caf1ddc2a9f98f7e2a2dd4e0fd84af193c"
+    },
+    {
+      "id": "table-throws",
+      "name": "Printed table throws",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/6ft-table-cover?sides=3sided",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/slETs0ae-s1000.jpg",
+      "sourceAlt": "6' Table Throw",
+      "localPath": "public/assets/products/table-throws.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 36370,
+      "sha256": "8008459d9241cf03b4519f0ddc5455acf87047d5010af0ea9be2e47cfffa250f"
+    },
+    {
+      "id": "fitted-tables",
+      "name": "Fitted table covers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/Fitted-Table-Cover",
+      "imageUrl": "https://www.b2sign.com/image/thumb/260827/vYAMJQbO-s1000.jpg",
+      "sourceAlt": "Fitted Table Cover",
+      "localPath": "public/assets/products/fitted-tables.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 24330,
+      "sha256": "440fcc18d6778dbbc1c902c33499cc53469ac5eafa3b711371b3a988f5d593f9"
+    },
+    {
+      "id": "stretch-tables",
+      "name": "Stretch table covers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/stretch-table-cover?size=6ft",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240319/chx8JxbX-s1000.jpg",
+      "sourceAlt": "Stretch Table Throw",
+      "localPath": "public/assets/products/stretch-tables.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 19736,
+      "sha256": "aa471261ebffeba190532cb37442c33b839b892d25c0b4c73f7ec998057ff320"
+    },
+    {
+      "id": "round-tables",
+      "name": "Round table covers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/round-table-cover?table=standard&table_size=standard_31.5",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240711/2Nhoq0lR-s1000.jpg",
+      "sourceAlt": "Round table Cover",
+      "localPath": "public/assets/products/round-tables.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 56686,
+      "sha256": "fdb468d19602e1f365cfd31b401e7ffe462c7e9c341af12e897bdd5ca5e8ddf3"
+    },
+    {
+      "id": "table-runners",
+      "name": "Table runners",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/table-runner?runner_throw=tro",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/ZoZPYcNX-s1000.jpg",
+      "sourceAlt": "Table Runner",
+      "localPath": "public/assets/products/table-runners.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 28022,
+      "sha256": "55a46474f3f24e35ce9c4218d0a1163cde5e501a850160a557504147238d29c3"
+    },
+    {
+      "id": "solid-tables",
+      "name": "Solid-color table throws",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/solid-color-table-throws-assorted-colors",
+      "imageUrl": "https://www.b2sign.com/image/thumb/251029/EJTRbO8c-s1000.jpg",
+      "sourceAlt": "Solid Color Table Throws",
+      "localPath": "public/assets/products/solid-tables.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 13976,
+      "sha256": "7ec6742116946423bd2a45bb93042257670efc8203b81850b1c3294ef6289dba"
+    },
+    {
+      "id": "paper-posters",
+      "name": "Paper posters",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/posters",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240306/zFMdcDl6-s1000.jpg",
+      "sourceAlt": "Posters",
+      "localPath": "public/assets/products/paper-posters.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 262946,
+      "sha256": "3c0059dc97fd98143fc01fbfd02c771bf18ee143e29dd66dac05fea54540b4e0"
+    },
+    {
+      "id": "display-inserts",
+      "name": "Poster & popup inserts",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/popup",
+      "imageUrl": "https://www.b2sign.com/image/thumb/230731/swifC8VI_s1000.jpg",
+      "sourceAlt": "Popup",
+      "localPath": "public/assets/products/display-inserts.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        583
+      ],
+      "imageSize": [
+        1000,
+        583
+      ],
+      "bytes": 25846,
+      "sha256": "271cf5b6db75dac7978490f5f263b11b733a5c2cb9db08e2d61bd101d231930a"
+    },
+    {
+      "id": "canvas-roll",
+      "name": "Canvas roll prints",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/canvas-roll",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/68XAzqBZ-s1000.jpg",
+      "sourceAlt": "Canvas Roll",
+      "localPath": "public/assets/products/canvas-roll.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 137282,
+      "sha256": "806a8466ebe7bd719675285c69c3257797948164b27c471d3ffc05514eae0bc8"
+    },
+    {
+      "id": "canvas-wraps",
+      "name": "Canvas wraps",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/canvas-wrap",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/HSEyGxhC-s1000.jpg",
+      "sourceAlt": "Canvas Wrap",
+      "localPath": "public/assets/products/canvas-wraps.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 142382,
+      "sha256": "fa0478d21e030b1e2a88be7a75882b613071cd0188960399a04919bc7f5f7836"
+    },
+    {
+      "id": "framed-canvas",
+      "name": "Framed canvas",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/framed-canvas",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/Pna2IdLH-s1000.jpg",
+      "sourceAlt": "Framed Canvas",
+      "localPath": "public/assets/products/framed-canvas.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 78954,
+      "sha256": "d3e0f8dc95c1cefd897fd364c0f66e62edd46ed8736a73f4af3419c24bbc8866"
+    },
+    {
+      "id": "framed-prints",
+      "name": "Framed prints",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/framed-prints",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/elQkcvV5-s1000.jpg",
+      "sourceAlt": "Framed Prints",
+      "localPath": "public/assets/products/framed-prints.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 157956,
+      "sha256": "54084da26878d811add610e1df787a8bef16e11f9ecd0a753e06ccc391c583bb"
+    },
+    {
+      "id": "wall-fabric",
+      "name": "Adhesive wall murals",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/wall-graphics",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250811/Cn9xMm92-s1000.jpg",
+      "sourceAlt": "Adhesive Wall Fabric",
+      "localPath": "public/assets/products/wall-fabric.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 190850,
+      "sha256": "1b75af9db838cf7267d11a1fb83d523773e6ab0783ee83a5bc5be77b2b841a6d"
+    },
+    {
+      "id": "wallpaper",
+      "name": "Non-woven wallpaper",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/non_woven_wallpapper",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250811/J84wxqP9-s1000.jpg",
+      "sourceAlt": "Non-Woven Wallpaper",
+      "localPath": "public/assets/products/wallpaper.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 137282,
+      "sha256": "dd0ee3cb5ee15e8a63960fb4077af73a235fd8585bed228a869ca465e8794f97"
+    },
+    {
+      "id": "wall-seg",
+      "name": "Wall-mounted fabric frames",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/wall_mount_seg",
+      "imageUrl": "https://www.b2sign.com/image/thumb/250602/AX2oZYTK-s1000.jpg",
+      "sourceAlt": "Wall Mount SEG",
+      "localPath": "public/assets/products/wall-seg.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 99366,
+      "sha256": "0154d92a4750d95762df9a2f5116d4f8b3ada1dba2799907c5e3c945cc6bcbc1"
+    },
+    {
+      "id": "dtf-transfers",
+      "name": "DTF garment transfers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/direct-to-film",
+      "imageUrl": "https://www.b2sign.com/image/thumb/251027/FUbF9MYq-s1000.jpg",
+      "sourceAlt": "DTF Transfer",
+      "localPath": "public/assets/products/dtf-transfers.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 29164,
+      "sha256": "39f0c72f97f5f12fc99e9b522da23e0d711063fa7b76811c1a7adfb8a3ede333"
+    },
+    {
+      "id": "uv-dtf",
+      "name": "UV DTF transfers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/uv-dtf",
+      "imageUrl": "https://www.b2sign.com/image/thumb/251027/sUV0L79P-s1000.jpg",
+      "sourceAlt": "UV DTF",
+      "localPath": "public/assets/products/uv-dtf.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 87766,
+      "sha256": "6dd86c20607dc7b0ae469337810aef5881dc3f3a27e11853b6c2e2a5fabeef5a"
+    },
+    {
+      "id": "front-lit-letters",
+      "name": "Front-lit channel letters",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/standard-channel-letter",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/masYb5Fr-s1000.jpg",
+      "sourceAlt": "Standard Channel Letters",
+      "localPath": "public/assets/products/front-lit-letters.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        500
+      ],
+      "imageSize": [
+        1000,
+        500
+      ],
+      "bytes": 21170,
+      "sha256": "6dc13076a5d88c955e8e0593dbb9ff0f30610d9c161c97d68236c5d0316c48d1"
+    },
+    {
+      "id": "halo-letters",
+      "name": "Halo-lit channel letters",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/channel-letter",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/r9OyBCVa-s1000.jpg",
+      "sourceAlt": "Halo/Reverse Lit Channel Letters",
+      "localPath": "public/assets/products/halo-letters.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        500
+      ],
+      "imageSize": [
+        1000,
+        500
+      ],
+      "bytes": 8960,
+      "sha256": "96f61efc23c1f32f7f999dfd341cafd8ecef4db90e5e21f9f902b3b5c5e1ab86"
+    },
+    {
+      "id": "premium-letters",
+      "name": "Premium acrylic-face letters",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/channel-letter",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/LkTyHRUR-s1000.jpg",
+      "sourceAlt": "Premium Channel Letters",
+      "localPath": "public/assets/products/premium-letters.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        500
+      ],
+      "imageSize": [
+        1000,
+        500
+      ],
+      "bytes": 9600,
+      "sha256": "b80e7921ce0b1277622eac4cf7c358ccc34b125a659a80fd7ef4dc595cfcb0d6"
+    },
+    {
+      "id": "cut-metal",
+      "name": "Custom cut-metal signs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/metal-sign",
+      "imageUrl": "https://www.b2sign.com/image/thumb/260810/15E7hBTR-s1000.jpg",
+      "sourceAlt": "Laser Cut Metal Sign",
+      "localPath": "public/assets/products/cut-metal.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 287984,
+      "sha256": "0350ff25c8299bae48365b6a0488a0a71aa454682f58ba5bf7729e52f20aa896"
+    },
+    {
+      "id": "backlit-inserts",
+      "name": "Backlit film & polycarbonate",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/backlit-film",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240306/vOnfPXgS-s1000.jpg",
+      "sourceAlt": "Backlit Film",
+      "localPath": "public/assets/products/backlit-inserts.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 66162,
+      "sha256": "b8bacf11773e9e0b878341577c8db50d11d8b133c09e2203a805eeccb5116ec3"
+    },
+    {
+      "id": "reflective-finishes",
+      "name": "Reflective sign finishes",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/reflective-adhesive-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/CieXPpn5-s1000.jpg",
+      "sourceAlt": "Reflective Adhesive Vinyl",
+      "localPath": "public/assets/products/reflective-finishes.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 55080,
+      "sha256": "3f250323878615be7985041f4919cf997753f74a872abc44bf0c1f2a661c0093"
+    },
+    {
+      "id": "dry-erase",
+      "name": "Dry-erase signs & graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/dry-erase-adhesive-vinyl",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/YQmbqifS-s1000.jpg",
+      "sourceAlt": "Dry Erase Adhesive Vinyl",
+      "localPath": "public/assets/products/dry-erase.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 30464,
+      "sha256": "46164cfd98654773e49ef0f9eb9d0eadfd65b699b98021ae62392aae396ae68c"
+    },
+    {
+      "id": "replacement-graphics",
+      "name": "Replacement display graphics",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/custom-seg-fabric",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/5HeAGSx1-s1000.jpg",
+      "sourceAlt": "Custom SEG Fabric",
+      "localPath": "public/assets/products/replacement-graphics.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 62302,
+      "sha256": "8230fa8fbfd8a95e1deedb938aa17248c640449feeb8de2c35c47ced995000b1"
+    },
+    {
+      "id": "display-hardware",
+      "name": "Display frames & components",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/banner-stand-hardware",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/vZFmEIKG-s1000.jpg",
+      "sourceAlt": "Banner Stand Hardware",
+      "localPath": "public/assets/products/display-hardware.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 43648,
+      "sha256": "f838bcc84fbe6832e1a30a0015bd013b07470284425d21578d34fabc031f5f6f"
+    },
+    {
+      "id": "flag-hardware",
+      "name": "Flag poles & bases",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/flag-hardware",
+      "imageUrl": "https://www.b2sign.com/image/thumb/251217/y60bUqYS-s1000.jpg",
+      "sourceAlt": "Flag Hardware",
+      "localPath": "public/assets/products/flag-hardware.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 46216,
+      "sha256": "d8844cded1f3b1dbe4daebd108d634a0abb682084eb4facb15a59f14fccb8f8e"
+    },
+    {
+      "id": "tent-hardware",
+      "name": "Tent frames & supports",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/event-tent-hardware",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240506/9Vtfg8Tf-s1000.jpg",
+      "sourceAlt": "Event Tent Hardware",
+      "localPath": "public/assets/products/tent-hardware.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 29184,
+      "sha256": "944f870ba0526a5212e5c1dd6b385d119f18c5e84144078458b389695e829ea7"
+    },
+    {
+      "id": "sign-stakes",
+      "name": "Yard-sign stakes & supports",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/real-estate-hardware-only",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/xdiV28IM-s1000.jpg",
+      "sourceAlt": "Real Estate Hardware",
+      "localPath": "public/assets/products/sign-stakes.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 11188,
+      "sha256": "ebc6b7a4bb550878c6b0d09994abec5988c943ff227b4c03c4cc5a66da937229"
+    },
+    {
+      "id": "standoffs",
+      "name": "Sign standoffs",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/aluminum-standoff-hardware",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240501/sjUZihjS-s1000.jpg",
+      "sourceAlt": "Aluminum Standoff Hardware",
+      "localPath": "public/assets/products/standoffs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 21474,
+      "sha256": "dfb3451ab16999765fca355dc246af09ad992d534d12d8019926303fe164faf5"
+    },
+    {
+      "id": "poster-hangers",
+      "name": "Poster rails & wood hangers",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/wood-frame-hanger",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/jSmHiOK1-s1000.jpg",
+      "sourceAlt": "Magnetic Wood Frame Hanger",
+      "localPath": "public/assets/products/poster-hangers.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 34096,
+      "sha256": "1f065794401a850bdff6fa838cc836fc741ab9ffcf58fd66eb584a85fcc540b2"
+    },
+    {
+      "id": "display-lights",
+      "name": "Display lighting",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/led-light-trade-show-display",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/qASGHTxX-s1000.jpg",
+      "sourceAlt": "LED Light (Trade Show Display)",
+      "localPath": "public/assets/products/display-lights.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        575
+      ],
+      "imageSize": [
+        1000,
+        575
+      ],
+      "bytes": 21854,
+      "sha256": "fe5e1cec194c57c2b24c36fa6b539b3f39dd7d765b9f3076b9b3db09dd83125d"
+    },
+    {
+      "id": "blank-media",
+      "name": "Blank print media",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/4-mil-calendered-vinyl-matte-54-x-164",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240501/Q2gbLuvV-s1000.jpg",
+      "sourceAlt": "4 Mil Calendered Vinyl (Matte) - 54\" x 164'",
+      "localPath": "public/assets/products/blank-media.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 15602,
+      "sha256": "eb8ad92e20f76bdeeae2d9243d94fce466532a899959b97c617f1902a64a6298"
+    },
+    {
+      "id": "finishing-supplies",
+      "name": "Sign finishing supplies",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/double-sided-banner-tape-1-x-164",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240501/kyc8rivx-s1000.jpg",
+      "sourceAlt": "Double Sided Banner Tape - 1\" x 164’",
+      "localPath": "public/assets/products/finishing-supplies.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 16056,
+      "sha256": "dd4dfd8851ae12b2ef3068d5187c6cf1824b00d0d0b45546a630ca7483bea215"
+    },
+    {
+      "id": "project-coordination",
+      "name": "Signage project coordination",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/10x20-custom-booth",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240322/cDwYTRMR-s1000.jpg",
+      "sourceAlt": "10' x 20' Booths",
+      "localPath": "public/assets/products/project-coordination.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        574
+      ],
+      "imageSize": [
+        1000,
+        574
+      ],
+      "bytes": 68992,
+      "sha256": "a7c614857b71763de95bdf2c695006c3e9b8f8723ef0c049438bbe6555c5a016"
+    },
+    {
+      "id": "artwork-review",
+      "name": "Artwork & file coordination",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/custom-seg-fabric",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240326/5HeAGSx1-s1000.jpg",
+      "sourceAlt": "Custom SEG Fabric",
+      "localPath": "public/assets/products/artwork-review.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 62302,
+      "sha256": "8230fa8fbfd8a95e1deedb938aa17248c640449feeb8de2c35c47ced995000b1"
+    },
+    {
+      "id": "installation-service",
+      "name": "Sign & graphic installation",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/acrylic-prints",
+      "imageUrl": "https://www.b2sign.com/image/thumb/260813/xwHKXwuU-s1000.jpg",
+      "sourceAlt": "Acrylic Prints",
+      "localPath": "public/assets/products/installation-service.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 69190,
+      "sha256": "9ca32c4942ef8014650df40e44619d45fc90738bb171175e51068ff0a6712b4a"
+    },
+    {
+      "id": "local-delivery",
+      "name": "Local delivery & drop-off",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/banner-stand-hardware",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240228/MhiZYWYm-s1000.jpg",
+      "sourceAlt": "Banner Stand Hardware",
+      "localPath": "public/assets/products/local-delivery.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 43042,
+      "sha256": "a5831fdf37272864d3c504de32ef62ee03d94925f98e86bb8fac89c788e64785"
+    },
+    {
+      "id": "repeat-campaigns",
+      "name": "Dealership & repeat campaigns",
+      "supplier": "B2Sign",
+      "sourcePage": "https://www.b2sign.com/13oz-vinyl-banner",
+      "imageUrl": "https://www.b2sign.com/image/thumb/240430/HrhLAGOx-s1000.jpg",
+      "sourceAlt": "13oz. Vinyl Banner",
+      "localPath": "public/assets/products/repeat-campaigns.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1000,
+        1000
+      ],
+      "imageSize": [
+        1000,
+        1000
+      ],
+      "bytes": 78992,
+      "sha256": "00e4d4b22a37fb85566da06968e82ec5c0795c861e7b3c58980a6bc23503e0ba"
+    },
+    {
+      "id": "bubble-core-signs",
+      "name": "Bubble-core plastic signs",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/1",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/53/background.jpg",
+      "sourceAlt": "Rigid Bubble Core",
+      "localPath": "public/assets/products/bubble-core-signs.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 77726,
+      "sha256": "8bef0d286c9511cc4f4a42e821da1865cde63b77b51131a7320e3055d8ccebf2"
+    },
+    {
+      "id": "double-window",
+      "name": "Double-sided window graphics",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/3",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/24/background.jpg",
+      "sourceAlt": "Double-sided Window Vinyl",
+      "localPath": "public/assets/products/double-window.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 77524,
+      "sha256": "fd07ded1e279219421a60c2b362ed281757521095bcc0cdf288a8634143baa6e"
+    },
+    {
+      "id": "outdoor-floor",
+      "name": "Outdoor floor graphics",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/3",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/120/background.jpg",
+      "sourceAlt": "Outdoor Surfaces",
+      "localPath": "public/assets/products/outdoor-floor.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        853,
+        480
+      ],
+      "imageSize": [
+        853,
+        480
+      ],
+      "bytes": 90950,
+      "sha256": "971ca60d3c9da013fa65c142b48e680d6bc92d68646245f669ddf4ddd364f34d"
+    },
+    {
+      "id": "durable-posters",
+      "name": "Tear-resistant posters",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/2",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/20/background.jpg",
+      "sourceAlt": "Water & Tear Resistant Paper",
+      "localPath": "public/assets/products/durable-posters.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 67280,
+      "sha256": "f93255f392e0f8f1e40a9cc396d1377c0d61b04b07e82595523418177f3c2a86"
+    },
+    {
+      "id": "printed-shirts",
+      "name": "Printed T-shirts",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/999",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/1000/background.jpg",
+      "sourceAlt": "Direct to Garment",
+      "localPath": "public/assets/products/printed-shirts.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1920,
+        1080
+      ],
+      "imageSize": [
+        1000,
+        563
+      ],
+      "bytes": 90262,
+      "sha256": "4b46aba8bbd70bc357bae66575db04a9db9173564f6bee565449177543b4df37"
+    },
+    {
+      "id": "metal-cards",
+      "name": "Aluminum business cards",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/11",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/72/background.jpg",
+      "sourceAlt": "Rigid Aluminum Business Cards",
+      "localPath": "public/assets/products/metal-cards.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        1280,
+        720
+      ],
+      "imageSize": [
+        1000,
+        563
+      ],
+      "bytes": 34900,
+      "sha256": "6899a26b350bcccc01241449e2392c87d0773d01f362f631433c5e3629aa7bef"
+    },
+    {
+      "id": "business-cards",
+      "name": "Business cards",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/11",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/37/background.jpg",
+      "sourceAlt": "Utilize for Business Cards, Postcards, or Mailers",
+      "localPath": "public/assets/products/business-cards.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 38754,
+      "sha256": "05daf3656f1c65953921741c7b9bfeb1f3b24668cad01a8e57b90e90234e72be"
+    },
+    {
+      "id": "postcards",
+      "name": "Postcards",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/11",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/37/background.jpg",
+      "sourceAlt": "Utilize for Business Cards, Postcards, or Mailers",
+      "localPath": "public/assets/products/postcards.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 38754,
+      "sha256": "05daf3656f1c65953921741c7b9bfeb1f3b24668cad01a8e57b90e90234e72be"
+    },
+    {
+      "id": "mailers",
+      "name": "Printed mailers",
+      "supplier": "Signs365",
+      "sourcePage": "https://www.signs365.com/portal/#catalog/11",
+      "imageUrl": "https://www.signs365.com/portal/static/images/categories/37/background.jpg",
+      "sourceAlt": "Utilize for Business Cards, Postcards, or Mailers",
+      "localPath": "public/assets/products/mailers.webp",
+      "checked": "2026-11-03",
+      "sourceSize": [
+        640,
+        360
+      ],
+      "imageSize": [
+        640,
+        360
+      ],
+      "bytes": 38754,
+      "sha256": "05daf3656f1c65953921741c7b9bfeb1f3b24668cad01a8e57b90e90234e72be"
+    }
+  ]
+}
