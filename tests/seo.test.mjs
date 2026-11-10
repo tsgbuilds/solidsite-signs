@@ -62,7 +62,7 @@ test('marketing pages return distinct server-rendered metadata, safe linked sche
     const website = graph.find(item => item['@type'] === 'WebSite');
     const webpage = graph.find(item => ['WebPage', 'CollectionPage'].includes(item['@type']));
     assert.equal(organization.telephone, '+17139122151');
-    assert.equal(organization.email, 'erik@gosolidsite.com');
+    assert.equal(organization.email, 'info@gosolidsite.com');
     assert.equal(website.publisher['@id'], organization['@id']);
     assert.equal(webpage.isPartOf['@id'], website['@id']);
     assert.equal(webpage.url, origin + path);

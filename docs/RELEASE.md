@@ -1,5 +1,11 @@
 # Initial site build — November 2, 2026
 
+## Public website identity correction — November 10, 2026
+
+The owner's instruction now covers personal-name references across all public company sites. SolidSite Signs copy, product-detail templates, schema, browser/server confirmation messages, artwork links and the downloadable catalog use company branding and the existing general contact `info@gosolidsite.com`. Outbound sender identities, private records and form behavior are unchanged; mailbox delivery was not tested.
+
+This correction is rebased onto production `main` commit `70b9f13` in an isolated checkout, preserving the live banner form and campaign attribution. The original working directory and its documentation/outreach changes are untouched. Verification passed: syntax checks, all 31 existing tests, a public-source name scan, all 32 PDF pages' text/annotations/metadata, and rendered visual review of changed PDF pages 1, 30, 31 and 32. Existing asset-content hashing changes the app/PDF URLs automatically.
+
 Owner: Atlas. Company: SolidSite. Source: Erik's request to build the site in `tsgbuilds/solidsite-signs`, plus his instruction to reuse SolidSite contacts. Repository was empty when inspected. No outside customer records or unrelated company assets were imported.
 
 ## Delivered

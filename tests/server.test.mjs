@@ -116,7 +116,7 @@ test('homepage, contact identity, assets, privacy and canonical metadata are ser
   assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
   const html = await response.text();
   assert.match(html, /tel:\+17139122151/);
-  assert.match(html, /mailto:erik@gosolidsite.com/);
+  assert.match(html, /mailto:info@gosolidsite.com/);
   assert.match(html, /canonical" href="https:\/\/signs.example.com\/"/);
   assert.ok(!/Lexus|30,000|15,000/.test(html));
   const assets = [...html.matchAll(/(?:src|href)="(\/(?:assets\/[^"#]+|styles.css|app.js|privacy.html))"/g)].map(m => m[1]);

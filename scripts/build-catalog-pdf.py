@@ -66,7 +66,7 @@ starts={}
 for page,(cat,_,_) in enumerate(spreads,2):starts.setdefault(cat['id'],page)
 header('2026 collection')
 p('Signs, graphics\nand everything\naround them.',M,682,CW,'title')
-p('A product and service guide for your business, storefront, dealership or next event. Work directly with Erik from the brief through the agreed delivery or installation.',M,548,CW,'intro')
+p('A product and service guide for your business, storefront, dealership or next event. Work with SolidSite Signs from the brief through the agreed delivery or installation.',M,548,CW,'intro')
 # Original illustrative image already used on SolidSite's website.
 c.drawImage(pdf_image(ROOT/'public/assets/storefront.webp',1200),M,290,width=CW,height=200,preserveAspectRatio=True,anchor='c')
 p('Illustrative signage concept. Not a completed client project.',M,282,CW,'small')
@@ -112,9 +112,9 @@ y=510
 for title,text in questions:
     p(title,M,y,150,'name');p(text,M+164,y,CW-164,'body');c.setStrokeColor(LINE);c.line(M,y-52,W-M,y-52);y-=82
 c.setFillColor(INK);c.roundRect(M,118,CW,92,4,fill=1,stroke=0)
-c.setFillColor(WHITE);c.setFont('Display',30);c.drawString(M+22,176,'WORK DIRECTLY WITH ERIK.')
-c.setFont('BarlowBold',14);c.drawString(M+22,149,'(713) 912-2151  |  erik@gosolidsite.com')
-c.linkURL('mailto:erik@gosolidsite.com',(M,118,W-M,166),relative=0)
+c.setFillColor(WHITE);c.setFont('Display',30);c.drawString(M+22,176,'WORK WITH SOLIDSITE SIGNS.')
+c.setFont('BarlowBold',14);c.drawString(M+22,149,'(713) 912-2151  |  info@gosolidsite.com')
+c.linkURL('mailto:info@gosolidsite.com',(M,118,W-M,166),relative=0)
 p('Serving Greater Houston. Production is coordinated through specialist partners. Installation, access, electrical work and permitting needs are reviewed for each project; only the agreed scope is included. Edition: November 2026.',M,98,CW,'small')
 footer(page);c.showPage();c.save()
 print(f'{OUT}\n{page} pages; {sum(len(cat["items"]) for cat in DATA["categories"])} products/services')

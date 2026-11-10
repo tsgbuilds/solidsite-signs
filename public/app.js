@@ -88,7 +88,7 @@ form?.addEventListener('submit', async event => {
     if (!response.ok) throw new Error(result.error || 'Your request could not be saved. Please try again.');
     if (!result.reference) throw new Error('We could not confirm receipt. Please try again or call us.');
     document.querySelector('#quote-reference').textContent = result.reference;
-    document.querySelector('#artwork-link').href = `mailto:erik@gosolidsite.com?subject=${encodeURIComponent(`Signage project ${result.reference} — artwork and photos`)}`;
+    document.querySelector('#artwork-link').href = `mailto:info@gosolidsite.com?subject=${encodeURIComponent(`Signage project ${result.reference} — artwork and photos`)}`;
     form.hidden = true;
     success.hidden = false;
     success.focus({ preventScroll: true });
@@ -100,7 +100,7 @@ form?.addEventListener('submit', async event => {
   } catch (failure) {
     error.textContent = failure.name === 'AbortError'
       ? 'We couldn’t confirm receipt in time. Your details are still here—try again, or call (713) 912-2151.'
-      : `${failure.message} You can also call (713) 912-2151 or email erik@gosolidsite.com.`;
+      : `${failure.message} You can also call (713) 912-2151 or email info@gosolidsite.com.`;
     error.hidden = false;
   } finally {
     clearTimeout(timeout);

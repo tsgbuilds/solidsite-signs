@@ -19,7 +19,9 @@ Rendered pages use content-hash query versions for the JavaScript and CSS files.
 
 ## Contacts and content
 
-Per Erik's November 2, 2026 direction, use the same contact details as SolidSite Services: **(713) 912-2151**, **erik@gosolidsite.com**. Signage inquiries remain SolidSite records; they must not be sent from another company's account. The site does not send emails automatically. Artwork links open the visitor's email app addressed to the approved SolidSite mailbox.
+Public contact details: **(713) 912-2151**, **info@gosolidsite.com**. The general SolidSite email replaces the named address under the November 2026 website-privacy instruction. Signage inquiries remain SolidSite records; they must not be sent from another company's account. The site does not send emails automatically. Artwork links open the visitor's email app; mailbox delivery was not tested in this website change. Actual authorized sending identities are unchanged.
+
+Use SolidSite Signs for public attribution and contact copy. The owner's personal name must not appear in page copy, metadata, public scripts, the catalog or PDF output. Check the rendered pages and generated PDF when updating either source.
 
 The storefront photograph is an AI-generated concept, labeled on the page. Service specimens are original HTML/CSS concepts. Replace them with Erik's own authorized project photos when available. The local dealership history is described without naming the dealer or claiming its endorsement. Private sales/profit figures are not included in the public website.
 
