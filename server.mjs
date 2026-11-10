@@ -13,14 +13,21 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(ROOT, 'public');
 // A changed asset gets a new URL even when a browser or CDN retains an old copy.
 const assetVersions = Object.fromEntries(await Promise.all(
-  ['app.js', 'styles.css', 'catalog.js', 'catalog.css', 'downloads/solidsite-signs-catalog.pdf'].map(async name => [name,
+  ['app.js', 'ads.js', 'styles.css', 'catalog.js', 'catalog.css', 'downloads/solidsite-signs-catalog.pdf'].map(async name => [name,
     createHash('sha256').update(await readFile(resolve(PUBLIC, name))).digest('hex').slice(0, 16)])
 ));
-const versionAssets = html => html.replace(/(src|href)="\/(app\.js|styles\.css|catalog\.js|catalog\.css|downloads\/solidsite-signs-catalog\.pdf)"/g,
+const versionAssets = html => html.replace(/(src|href)="\/(app\.js|ads\.js|styles\.css|catalog\.js|catalog\.css|downloads\/solidsite-signs-catalog\.pdf)"/g,
   (_, attribute, name) => `${attribute}="/${name}?v=${assetVersions[name]}"`);
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8', '.pdf': 'application/pdf' };
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
-const contentSecurityPolicy = scriptHash => `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
+// Google Ads' documented origins only; do not allow arbitrary scripts or inline code.
+// https://developers.google.com/tag-platform/security/guides/csp#google_ads
+const contentSecurityPolicy = (scriptHash, adsEnabled = false) => {
+  const scripts = adsEnabled ? ' https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com' : '';
+  const images = adsEnabled ? `${scripts} https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com` : '';
+  const connections = adsEnabled ? `${images} https://ad.doubleclick.net` : '';
+  return `default-src 'self'; script-src 'self'${scriptHash ? ` '${scriptHash}'` : ''}${scripts}; style-src 'self'; font-src 'self'; img-src 'self' data:${images}; connect-src 'self'${connections}; frame-src ${adsEnabled ? 'https://www.googletagmanager.com' : "'none'"}; form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'`;
+};
 
 function hostnameFromHost(value) {
   // Only a hostname and optional port are accepted, never a URL or forwarded host.
@@ -61,9 +68,15 @@ async function parseBody(req) {
   throw Object.assign(new Error('Please use the project request form.'), { status: 415 });
 }
 
-export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'data'), siteUrl = process.env.SITE_URL || '', redirectHosts = process.env.REDIRECT_HOSTS || '', adminToken = process.env.ADMIN_TOKEN || '', trustProxy = process.env.TRUST_PROXY === '1', rateLimit = 10, rateWindow = 15 * 60 * 1000 } = {}) {
+export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'data'), siteUrl = process.env.SITE_URL || '', redirectHosts = process.env.REDIRECT_HOSTS || '', adminToken = process.env.ADMIN_TOKEN || '', trustProxy = process.env.TRUST_PROXY === '1', googleAdsConversionSendTo = process.env.GOOGLE_ADS_CONVERSION_SEND_TO, rateLimit = 10, rateWindow = 15 * 60 * 1000 } = {}) {
   const siteOrigin = siteUrl ? new URL(siteUrl).origin : '';
   const siteHostname = siteUrl ? new URL(siteUrl).hostname.toLowerCase().replace(/\.$/, '') : '';
+  // Public identifier verified from the dedicated Signs action on November 10, 2026.
+  // An explicit empty override disables tracking; development and other sites stay off.
+  const defaultAdsDestination = process.env.NODE_ENV === 'production' && siteOrigin.startsWith('https://') && ['solidsitesigns.com', 'www.solidsitesigns.com'].includes(siteHostname)
+    ? 'AW-18032798518/dFbACNym9bUdELbW2pZD' : '';
+  const configuredAdsDestination = googleAdsConversionSendTo ?? defaultAdsDestination;
+  const adsSendTo = /^AW-\d+\/[A-Za-z0-9_-]+$/.test(configuredAdsDestination) ? configuredAdsDestination : '';
   const redirectHostnames = new Set(redirectHosts.split(',').map(value => hostnameFromHost(value.trim())).filter(Boolean));
   redirectHostnames.delete(siteHostname);
   const store = openQuoteStore(dataDir);
@@ -159,6 +172,7 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
         const catalog = page.catalog ? getCatalog() : undefined;
         const seo = renderSeoHead(page, siteOrigin, catalog);
         let html = content.toString().replace('<!-- SEO_HEAD -->', seo.head);
+        if (adsSendTo) html = html.replace('<head>', `<head><meta name="signs-google-ads" content="${adsSendTo}"><script src="/ads.js" defer></script>`);
         // Render current attribution into the form for visitors submitting without JS.
         // A first-party session also carries the latest tagged visit through internal navigation.
         const campaign = cleanCampaign({ ...Object.fromEntries(url.searchParams), landing_path: pathname });
@@ -170,7 +184,7 @@ export function createApp({ dataDir = process.env.DATA_DIR || resolve(ROOT, 'dat
           .replaceAll('__PRODUCT_QUOTE_URL__', () => escapeHtml(quoteUrl(page.item)))
           .replace('<!-- PRODUCT_DETAIL -->', () => renderProductDetail(page.item, page.category));
         content = Buffer.from(versionAssets(html));
-        res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash));
+        res.setHeader('Content-Security-Policy', contentSecurityPolicy(seo.scriptHash, Boolean(adsSendTo)));
       }
       if (extname(path) === '.pdf') res.setHeader('X-Robots-Tag', 'noindex');
       res.writeHead(200, { 'Content-Type': TYPES[extname(path)], 'Content-Length': content.length, 'Cache-Control': page && url.search ? 'private, no-store' : pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache' });

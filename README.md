@@ -84,3 +84,11 @@ npm run check
 Review rendered PDF pages before publishing. Python and ReportLab are authoring tools only; Railway serves the committed PDF without either dependency. Public descriptions are original. Image provenance and the supplier-photo update are documented in `docs/ASSETS.md`. Products are quoted per project, and supplier production claims are not promises of installation capability or customer delivery dates.
 
 No recurring subscriptions, external messages, ad campaigns or customer commitments are created by running this website.
+
+## Google Ads inquiry measurement
+
+`NODE_ENV=production` with the HTTPS `SITE_URL` on `solidsitesigns.com` or `www.solidsitesigns.com` uses the dedicated SolidSite Signs saved-inquiry destination verified November 10: `AW-18032798518/dFbACNym9bUdELbW2pZD`. Development and other hostnames default to no tag. `GOOGLE_ADS_CONVERSION_SEND_TO` can explicitly override this public measurement identifier (`AW-<id>/<label>`); an empty or invalid override disables it. Restart after configuring it; pages contain a versioned, first-party bootstrap before the form script. The strict CSP adds only Google's documented Ads origins, without unsafe inline/eval permissions.
+
+A conversion is queued only after `/api/quotes` succeeds and returns a valid saved `SS-` reference. That reference is the `transaction_id`; in-page and tab-session deduplication also suppress retries. Failed requests, invalid forms and page visits do not send conversion events. The browser queues an event while the Google script is loading; a blocked tag cannot turn a saved inquiry into a form error. No submitted contact fields, project descriptions, or arbitrary URL query values are added to measurement. Advertising personalization is disabled, and Global Privacy Control disables the tag.
+
+`node --test tests/ads-conversions.test.mjs tests/server.test.mjs` exercises the actual form handler with mocked browser APIs and the local HTTP server using temporary records. It does not send Google conversions or production submissions. These tests establish local behavior, not Google's receipt of a real conversion. JavaScript-disabled visitors still save inquiries through the native form, but do not run browser conversion measurement.

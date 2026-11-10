@@ -87,6 +87,7 @@ form?.addEventListener('submit', async event => {
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || 'Your request could not be saved. Please try again.');
     if (!result.reference) throw new Error('We could not confirm receipt. Please try again or call us.');
+    try { window.signsAdsConversion?.(result.reference); } catch { /* A blocked tag must not interrupt confirmation. */ }
     document.querySelector('#quote-reference').textContent = result.reference;
     document.querySelector('#artwork-link').href = `mailto:info@gosolidsite.com?subject=${encodeURIComponent(`Signage project ${result.reference} — artwork and photos`)}`;
     form.hidden = true;

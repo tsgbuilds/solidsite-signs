@@ -148,3 +148,61 @@ test('banner landing preserves a tagged native form save without leaking arbitra
   assert.equal((await post(f.url,{...sample,campaign_context:'malformed'})).status,201);
   assert.equal((await leads(f.url)).leads.find(x=>x.reference!==receipt).campaign,undefined);
 });
+
+test('configured measurement loads before the form script and permits only documented Google origins', async t => {
+  const f = await fixture(t, { googleAdsConversionSendTo: 'AW-123456789/TestLabel' });
+  for (const path of ['/', '/banners-houston/', '/catalog/', '/privacy.html']) {
+    const response = await fetch(f.url + path);
+    const html = await response.text();
+    assert.match(html, /<meta name="signs-google-ads" content="AW-123456789\/TestLabel">/);
+    assert.match(html, /<script src="\/ads.js\?v=[a-f0-9]{16}" defer><\/script>/);
+    if (html.includes('/app.js')) assert.ok(html.indexOf('/ads.js') < html.indexOf('/app.js'));
+    const csp = response.headers.get('content-security-policy');
+    assert.match(csp, /script-src 'self'.*https:\/\/www.googletagmanager.com/);
+    assert.match(csp, /connect-src[^;]*https:\/\/ad.doubleclick.net/);
+    assert.match(csp, /frame-src https:\/\/www.googletagmanager.com/);
+    assert.doesNotMatch(csp, /unsafe-inline|unsafe-eval|https:\/\/\*/);
+    assert.match(csp, /form-action 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'/);
+  }
+  assert.equal((await fetch(f.url + '/ads.js')).status, 200);
+  const fail = await post(f.url, { ...sample, email: 'bad' });
+  assert.doesNotMatch(fail.headers.get('content-security-policy'), /google/);
+  assert.equal((await leads(f.url)).leads.length, 0);
+});
+
+test('invalid or blank measurement configuration stays disabled without allowing injected markup', async t => {
+  for (const googleAdsConversionSendTo of ['', 'AW-123/\"><script>bad()</script>']) {
+    const f = await fixture(t, { googleAdsConversionSendTo });
+    const response = await fetch(f.url);
+    const html = await response.text();
+    assert.doesNotMatch(html, /signs-google-ads|\/ads.js|bad\(\)/);
+    assert.doesNotMatch(response.headers.get('content-security-policy'), /google/);
+  }
+});
+
+test('the verified Signs destination defaults on only for the production Signs origin', async t => {
+  const previousEnv = process.env.NODE_ENV;
+  const previousDestination = process.env.GOOGLE_ADS_CONVERSION_SEND_TO;
+  delete process.env.GOOGLE_ADS_CONVERSION_SEND_TO;
+  try {
+    for (const [mode, siteUrl, enabled] of [
+      ['production', 'https://solidsitesigns.com', true],
+      ['production', 'https://www.solidsitesigns.com', true],
+      ['production', 'https://example.com', false],
+      ['production', 'http://solidsitesigns.com', false],
+      ['development', 'https://solidsitesigns.com', false],
+      ['development', '', false]
+    ]) {
+      process.env.NODE_ENV = mode;
+      const f = await fixture(t, { siteUrl });
+      const html = await (await fetch(f.url)).text();
+      assert.equal(html.includes('AW-18032798518/dFbACNym9bUdELbW2pZD'), enabled, `${mode} ${siteUrl}`);
+    }
+    process.env.NODE_ENV = 'production';
+    const disabled = await fixture(t, { siteUrl: 'https://solidsitesigns.com', googleAdsConversionSendTo: '' });
+    assert.doesNotMatch(await (await fetch(disabled.url)).text(), /signs-google-ads/);
+  } finally {
+    if (previousEnv === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV = previousEnv;
+    if (previousDestination === undefined) delete process.env.GOOGLE_ADS_CONVERSION_SEND_TO; else process.env.GOOGLE_ADS_CONVERSION_SEND_TO = previousDestination;
+  }
+});
